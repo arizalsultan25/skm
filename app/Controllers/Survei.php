@@ -11,11 +11,11 @@ class Survei extends BaseController
         $this->surveiModel = new SurveiModel();
     }
 
-    public function index($id = FALSE)
+    public function index($id)
     {
         $data = [
-            'title' => 'Survei',
-            'survei' => $this->surveiModel->getsurvei($id)
+            'title' => 'Daftar Survei',
+            'survei' => $this->surveiModel->getSurveiByIdLayanan($id)
         ];
         return view('survei', $data);
     }

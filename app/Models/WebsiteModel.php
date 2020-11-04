@@ -7,6 +7,7 @@ use CodeIgniter\Model;
 class WebsiteModel extends Model
 {
     protected $table = 'website';
+    protected $useTimestamps = FALSE;
     protected $allowedFields = ['domain'];
 
     public function __construct()
@@ -16,19 +17,13 @@ class WebsiteModel extends Model
 
     public function getWebsite($id = FALSE)
     {
-        $builder = $this->db->table('website a');
+        $builder = $this->db->table('website');
         // Table Website
         if ($id == FALSE) {
-            $builder->orderBy('id', 'ASC');
+            $builder->orderBy('id', 'DESC');
             return $builder->get()->getResult();
         }
-        // Table Domain Survei
-        $builder->select('a.*, c.nama, d.id as id_survei');
-        $builder->join('domain-survei b', 'b.website_id = a.id');
-        $builder->join('layanan c', 'c.id = b.layanan_id');
-        $builder->join('survei d', 'd.layanan_id = c.id');
-        $builder->where('a.id', $id);
-        $query = $builder->get()->getResult();
-        return $query;
+
+        return $builder->getWhere(['id' => $id])->getRow();
     }
 }

@@ -11,20 +11,12 @@ class Website extends BaseController
         $this->webisteModel = new WebsiteModel();
     }
 
-    public function index($id = FALSE)
+    public function index()
     {
-        if ($id == FALSE) {
-            $data = [
-                'title' => 'Website',
-                'website' => $this->webisteModel->getWebsite()
-            ];
-            return view('website', $data);
-        }
-
         $data = [
-            'title' => 'domain-survei > Layanan',
-            'website' => $this->webisteModel->getWebsite($id)
+            'title' => 'Website',
+            'website' => $this->webisteModel->getWebsite()
         ];
-        return view('domain-survei', $data);
+        return view('website', $data);
     }
 }

@@ -15,7 +15,7 @@ class Jawaban extends Migration
 				'unsigned'       => true,
 				'auto_increment' => true
 			],
-			'pertanyaan_id' => [
+			'ref_id' => [
 				'type'           => 'INT',
 				'constraint'     => '11',
 				'unsigned'       => true
@@ -24,13 +24,13 @@ class Jawaban extends Migration
 				'type'           => 'VARCHAR',
 				'constraint'     => '255'
 			],
-			'nilai' => [
+			'bobot' => [
 				'type'           => 'INT',
 				'constraint'     => '11'
 			]
 		]);
 		$this->forge->addKey('id', true);
-		$this->forge->addForeignKey('pertanyaan_id', 'pertanyaan', 'id', 'CASCADE', 'CASCADE');
+		$this->forge->addForeignKey('ref_id', 'ref-unsur', 'id', 'CASCADE', 'CASCADE');
 		$this->forge->createTable('jawaban');
 	}
 

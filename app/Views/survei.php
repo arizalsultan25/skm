@@ -1,7 +1,8 @@
 <?= $title; ?>
 <br />
+
 <ul>
-    <li>Nama Survei : <?= $survei->nama; ?></li>
-    <li>Dibuat : <?= $survei->start; ?></li>
-    <li>Berakhir : <?= $survei->end; ?></li>
+    <?php foreach ($survei as $item) : ?>
+        <li><a href="/pertanyaan/<?= $item->id ?>"><?= $item->nama ?></a></li>
+    <?php endforeach; ?>
 </ul>

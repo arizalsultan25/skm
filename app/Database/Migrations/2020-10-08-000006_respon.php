@@ -20,14 +20,19 @@ class Respon extends Migration
 				'constraint'     => '11',
 				'unsigned'       => true
 			],
-			'jawaban_id' => [
+			'survei_id' => [
+				'type'           => 'INT',
+				'constraint'     => '11',
+				'unsigned'       => true
+			],
+			'nilai' => [
 				'type'           => 'INT',
 				'constraint'     => '11',
 				'unsigned'       => true
 			]
+
 		]);
 		$this->forge->addKey('id', true);
-		$this->forge->addForeignKey('jawaban_id', 'jawaban', 'id', 'CASCADE', 'CASCADE');
 		$this->forge->createTable('respon');
 	}
 

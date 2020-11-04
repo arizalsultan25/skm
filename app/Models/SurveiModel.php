@@ -7,18 +7,32 @@ use CodeIgniter\Model;
 class SurveiModel extends Model
 {
     protected $table = 'survei';
-    protected $allowedFields = ['nama', 'start', 'end'];
+    protected $allowedFields = ['layanan_id', 'nama', 'start', 'end'];
 
     public function __construct()
     {
         $this->db = \Config\Database::connect();
     }
 
-    public function getSurvei($id)
+    public function getIdSurvei($id)
     {
         $builder = $this->db->table('survei');
-        // Table Survei
-        $builder->where('id', $id);
-        return $builder->get()->getRow();
+        return $builder->getWhere(['id' => $id])->getRow();
+    }
+
+    public function getSurvei()
+    {
+        $builder = $this->db->table('survei a');
+        $builder->select('a.*, b.nama as nama_layanan');
+        $builder->join('layanan b', 'b.id = a.layanan_id');
+        $builder->orderBy('id', 'DESC');
+        return $builder->get()->getResult();
+    }
+
+    public function getSurveiByIdLayanan($id)
+    {
+        $builder = $this->db->table('survei');
+        $builder->where('layanan_id', $id);
+        return $builder->get()->getResult();
     }
 }

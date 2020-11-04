@@ -6,6 +6,9 @@ class WebsiteSeeder extends \CodeIgniter\Database\Seeder
 {
     public function run()
     {
+        // WebsiteSeeder, UnitSeeder, LayananSeeder, DomainSeeder, 
+        // SurveiSeeder, RefUnsurSeeder, PertanyaanSeeder, JawabanSeeder,
+        // UnsurSurveiSeeder
         $data = [
             [
                 'domain'    => 'batam.go.id'
