@@ -20,7 +20,7 @@
                     <div class="card-header bg-primary">
                         Tambah Unit Layanan
                     </div>
-                    <form action="/admin/unit-layanan/create" method="POST">
+                    <form action="/admin/unitlayanan/create" method="POST">
                         <div class="card-body">
                             <?= csrf_field(); ?>
                             <div class="form-group">

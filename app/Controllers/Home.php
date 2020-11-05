@@ -6,7 +6,23 @@ class Home extends BaseController
 {
 	public function index()
 	{
-		return view('welcome_message');
+		return view('admin/login');
+	}
+
+	public function LoginProcess()
+	{
+		# code...
+		$email = $_POST['email'];
+		$pass  = $_POST['password'];
+
+		if($email == "admin@kominfo.co.id" && $pass == "admin"){
+			
+			return redirect()->to('/testing');
+			
+		}else{
+			
+			return redirect()->to('/');			
+		}
 	}
 
 	//--------------------------------------------------------------------
