@@ -90,7 +90,7 @@
                         <img src="<?= base_url('assets/admin-lte') ?>/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
                     </div>
                     <div class="info">
-                        <a href="<?= base_url('testing') ?>" class="d-block">Admin Diskominfo</a>
+                        <a href="#" class="d-block">Admin Diskominfo</a>
                     </div>
                 </div>
 
@@ -100,6 +100,7 @@
                         <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
                         <li class="nav-item">
+                            <li <?=$this->uri?>>
                             <a href="<?= base_url('testing') ?>" class="nav-link">
                                 <i class="nav-icon fas fa-th"></i>
                                 <p>
@@ -195,10 +196,9 @@
 
         <footer class="main-footer">
             <div class="float-right d-none d-sm-block">
-                <b>Version</b> 3.0.5
+                <b>Version</b> CodeIgniter 4
             </div>
-            <strong>Copyright &copy; 2014-2019 <a href="http://adminlte.io">AdminLTE.io</a>.</strong> All rights
-            reserved.
+            <strong>Copyright SKM &copy; 2020</strong>
         </footer>
 
         <!-- Control Sidebar -->

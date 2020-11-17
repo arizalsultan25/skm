@@ -38,7 +38,14 @@
                             </div>
                             <div class="form-group">
                                 <label>Bobot</label>
-                                <input type="number" class="form-control" name="bobot" placeholder="Tulis Bobot">
+                                <select name='agama' class="custom-select">
+                                    <option selected>Pilih Bobot</option>
+                                    <option value='islam'>1</option>
+                                    <option value='kristen'>2</option>
+                                    <option value='katholik'>3</option>
+                                    <option value='kristen'>4</option>
+                                </select>
+                                <!-- <input type="number" class="form-control" name="bobot" placeholder="Tulis Bobot"> -->
                             </div>
                         </div>
                         <div class="card-footer">
@@ -72,7 +79,7 @@
                                         <td>1</td>
                                         <td><?= $item->nama ?></td>
                                         <td><?= $item->jawaban ?></td>
-                                        <td><?= $item->bobot ?></td>
+                                        <td><?= $item->nilai ?></td>
                                         <td>
                                             <a href="/admin/jawaban/update/<?= $item->id ?>" class="btn btn-sm btn-warning">Edit</a>
                                             <form action="/admin/jawaban/<?= $item->id ?>" class="d-inline" method="POST">

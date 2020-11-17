@@ -18,7 +18,7 @@ class ReferensiUnsurModel extends Model
     {
         $builder = $this->db->table('ref-unsur');
         if ($id == FALSE) {
-            $builder->orderBy('id', 'DESC');
+            $builder->orderBy('id', 'ASC');
             return $builder->get()->getResult();
         }
         return $builder->getWhere(['id' => $id])->getRow();

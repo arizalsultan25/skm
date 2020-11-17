@@ -27,7 +27,7 @@
                                 <label>Survei</label>
                                 <select name="ref_id" class="custom-select">
                                     <option selected>Pilih Survei</option>
-                                    <?php foreach ($refUnsur as $item) : ?>
+                                    <?php foreach ($survei as $item) : ?>
                                         <option value="<?= $item->id ?>"><?= $item->nama ?></option>
                                     <?php endforeach; ?>
                                 </select>
@@ -36,7 +36,7 @@
                                 <label>Nama Unsur</label>
                                 <select name="survei_id" class="custom-select">
                                     <option selected>Pilih Nama Unsur</option>
-                                    <?php foreach ($survei as $item) : ?>
+                                    <?php foreach ($refUnsur as $item) : ?>
                                         <option value="<?= $item->id ?>"><?= $item->nama ?></option>
                                     <?php endforeach; ?>
                                 </select>

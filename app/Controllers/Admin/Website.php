@@ -51,13 +51,13 @@ class Website extends BaseController
             return view('admin/websiteUpdate', $data);
         } else {
             if (!$this->validate([
-                'domain' => "required|is_unique[website.domain,id,{$this->request->getVar('id_website')}]"
+                'domain' => "required|is_unique[website.domain,id,{$this->request->getVar('website_id')}]"
             ])) {
                 return redirect()->to('/admin/website/update' . $id)->withInput();
             }
 
             $this->websiteModel->save([
-                'id' => $this->request->getVar('id_website'),
+                'id' => $this->request->getVar('website_id'),
                 'domain' => $this->request->getVar('domain')
             ]);
 

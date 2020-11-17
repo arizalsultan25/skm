@@ -5,6 +5,7 @@ namespace App\Controllers\Admin;
 use App\Controllers\BaseController;
 use App\Models\JawabanModel;
 use App\Models\ReferensiUnsurModel;
+use App\Models\Jawab;
 
 class Jawaban extends BaseController
 {
@@ -12,6 +13,7 @@ class Jawaban extends BaseController
     {
         $this->jawabanModel = new JawabanModel();
         $this->RefUnsurModel = new ReferensiUnsurModel();
+        $this->Jawab = new Jawab();
     }
 
     public function index()
@@ -36,13 +38,17 @@ class Jawaban extends BaseController
         )) {
             return redirect()->to('/admin/jawaban')->withInput();
         }
-        $this->jawabanModel->save([
-            'ref_id' => $this->request->getVar('ref_id'),
+        $data = [
+            'pertanyaan_id' => $this->request->getVar('ref_id'),
             'jawaban' => $this->request->getVar('jawaban'),
-            'bobot' => $this->request->getVar('bobot')
-        ]);
+            'nilai' => $this->request->getVar('bobot')
+        ];
+
+        $this->jawabanModel->save($data);       
         session()->setFlashdata('pesan', 'Jawaban berhasil ditambahkan');
-        return redirect()->to('/admin/jawaban');
+        //return redirect()->to('/admin/jawaban');
+        var_dump($data);
+        echo $this->request->getVar('ref_id').' '. $this->request->getVar('jawaban').' '.$this->request->getVar('bobot');
     }
 
     public function update($id)
@@ -64,11 +70,10 @@ class Jawaban extends BaseController
                 return redirect()->to('/admin/jawaban/update/' . $id)->withInput();
             }
 
-            $this->jawabanModel->save([
-                'id' => $this->request->getVar('id'),
-                'ref_id' => $this->request->getVar('ref_id'),
+            $this->jawabanModel->createData([
+                'pertanyaan_id' => $this->request->getVar('ref_id'),
                 'jawaban' => $this->request->getVar('jawaban'),
-                'bobot' => $this->request->getVar('bobot')
+                'nilai' => $this->request->getVar('bobot')
             ]);
 
             session()->setFlashdata('pesan', 'Jawaban berhasil Diubah');
