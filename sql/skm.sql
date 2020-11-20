@@ -1,13 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.2
+-- version 5.0.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 03, 2020 at 08:16 AM
--- Server version: 10.4.13-MariaDB
--- PHP Version: 7.4.7
+-- Generation Time: Nov 20, 2020 at 11:00 AM
+-- Server version: 10.4.11-MariaDB
+-- PHP Version: 7.4.2
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -18,32 +19,40 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `skm`
+-- Database: `skm_2020`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `domain_survei`
+-- Table structure for table `domain-survei`
 --
 
-CREATE TABLE `domain_survei` (
-  `id_domain_survei` int(12) NOT NULL,
-  `id_website` int(12) NOT NULL,
-  `id_layanan` int(12) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+CREATE TABLE `domain-survei` (
+  `id` int(11) UNSIGNED NOT NULL,
+  `website_id` int(11) UNSIGNED NOT NULL,
+  `layanan_id` int(11) UNSIGNED NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `domain-survei`
+--
+
+INSERT INTO `domain-survei` (`id`, `website_id`, `layanan_id`) VALUES
+(1, 1, 1);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `jawab`
+-- Table structure for table `jawaban`
 --
 
-CREATE TABLE `jawab` (
-  `id_jawab` int(12) NOT NULL,
-  `id_tanya` int(12) NOT NULL,
-  `txt_jawab` varchar(30) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+CREATE TABLE `jawaban` (
+  `id` int(11) UNSIGNED NOT NULL,
+  `pertanyaan_id` int(11) UNSIGNED NOT NULL,
+  `jawaban` varchar(255) NOT NULL,
+  `nilai` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -52,43 +61,95 @@ CREATE TABLE `jawab` (
 --
 
 CREATE TABLE `layanan` (
-  `id_layanan` int(12) NOT NULL,
-  `nama_layanan` text NOT NULL,
-  `id_opd` varchar(12) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+  `id` int(11) UNSIGNED NOT NULL,
+  `unit_id` int(11) UNSIGNED NOT NULL,
+  `nama` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `layanan`
+--
+
+INSERT INTO `layanan` (`id`, `unit_id`, `nama`) VALUES
+(1, 1, 'Pengesahan SPPT');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `opd`
+-- Table structure for table `migrations`
 --
 
-CREATE TABLE `opd` (
-  `id_opd` varchar(12) NOT NULL,
-  `nama_opd` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+CREATE TABLE `migrations` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `version` varchar(255) NOT NULL,
+  `class` text NOT NULL,
+  `group` varchar(255) NOT NULL,
+  `namespace` varchar(255) NOT NULL,
+  `time` int(11) NOT NULL,
+  `batch` int(11) UNSIGNED NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `opd`
+-- Dumping data for table `migrations`
 --
 
-INSERT INTO `opd` (`id_opd`, `nama_opd`) VALUES
-('1', 'Dinas Kependudukan Batam'),
-('2', 'Dinas Pendidikan Batam'),
-('3', 'ASDADFFFA'),
-('4', 'asdad');
+INSERT INTO `migrations` (`id`, `version`, `class`, `group`, `namespace`, `time`, `batch`) VALUES
+(1, '2020-10-08-000000', 'App\\Database\\Migrations\\RefUnsur', 'default', 'App', 1604412355, 1),
+(2, '2020-10-08-000000', 'App\\Database\\Migrations\\UnitLayanan', 'default', 'App', 1604412355, 1),
+(3, '2020-10-08-000000', 'App\\Database\\Migrations\\UserOpd', 'default', 'App', 1604412355, 1),
+(4, '2020-10-08-000001', 'App\\Database\\Migrations\\Layanan', 'default', 'App', 1604412355, 1),
+(5, '2020-10-08-000001', 'App\\Database\\Migrations\\Website', 'default', 'App', 1604412356, 1),
+(6, '2020-10-08-000002', 'App\\Database\\Migrations\\DomainSurvei', 'default', 'App', 1604412356, 1),
+(7, '2020-10-08-000002', 'App\\Database\\Migrations\\Survei', 'default', 'App', 1604412356, 1),
+(8, '2020-10-08-000003', 'App\\Database\\Migrations\\SurveiUnsur', 'default', 'App', 1604412356, 1),
+(9, '2020-10-08-000004', 'App\\Database\\Migrations\\Pertanyaan', 'default', 'App', 1604412357, 1),
+(10, '2020-10-08-000005', 'App\\Database\\Migrations\\Jawaban', 'default', 'App', 1604412357, 1),
+(11, '2020-10-08-000006', 'App\\Database\\Migrations\\Respon', 'default', 'App', 1604412357, 1);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ref_unsur`
+-- Table structure for table `pertanyaan`
 --
 
-CREATE TABLE `ref_unsur` (
-  `id_ref_unsur` int(12) NOT NULL,
-  `id_unsur` int(12) NOT NULL,
-  `nama_unsur` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+CREATE TABLE `pertanyaan` (
+  `id` int(11) UNSIGNED NOT NULL,
+  `ref_id` int(11) UNSIGNED NOT NULL,
+  `pertanyaan` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `pertanyaan`
+--
+
+INSERT INTO `pertanyaan` (`id`, `ref_id`, `pertanyaan`) VALUES
+(1, 3, 'Bagaimana pendapat Saudara tentang kecepatan waktu dalam memberikan pelayanan?');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `ref-unsur`
+--
+
+CREATE TABLE `ref-unsur` (
+  `id` int(11) UNSIGNED NOT NULL,
+  `nama` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `ref-unsur`
+--
+
+INSERT INTO `ref-unsur` (`id`, `nama`) VALUES
+(1, 'Persyaratan'),
+(2, 'Sistem, Mekanisme, dan Prosedur'),
+(3, 'Waktu Penyelesaian'),
+(4, 'Biaya/Tarif'),
+(5, 'Produk Spesifikasi Jenis Pelayanan'),
+(6, 'Kompetensi Pelaksana'),
+(7, 'Perilaku Pelaksana'),
+(8, 'Penanganan Pengaduan, Saran dan Masukan'),
+(9, 'Sarana dan prasarana');
 
 -- --------------------------------------------------------
 
@@ -97,10 +158,10 @@ CREATE TABLE `ref_unsur` (
 --
 
 CREATE TABLE `respon` (
-  `id_respon` int(12) NOT NULL,
-  `id_responden` int(12) NOT NULL,
-  `id_jawab` int(12) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+  `id` int(11) UNSIGNED NOT NULL,
+  `id_responded` int(11) UNSIGNED NOT NULL,
+  `jawaban_id` int(11) UNSIGNED NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -109,26 +170,61 @@ CREATE TABLE `respon` (
 --
 
 CREATE TABLE `survei` (
-  `id_survei` int(12) NOT NULL,
-  `nama_survei` text NOT NULL,
-  `id_layanan` int(12) NOT NULL,
-  `active` varchar(10) NOT NULL,
-  `start` date NOT NULL,
-  `end` date NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+  `id` int(11) UNSIGNED NOT NULL,
+  `layanan_id` int(11) UNSIGNED NOT NULL,
+  `nama` varchar(255) NOT NULL,
+  `start` datetime DEFAULT NULL,
+  `end` datetime DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `survei`
+--
+
+INSERT INTO `survei` (`id`, `layanan_id`, `nama`, `start`, `end`) VALUES
+(1, 1, 'Survei Pengesahan SPPT di Kecamatan Sekupang', '2020-11-05 23:59:00', '2021-01-07 23:59:00');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tanya`
+-- Table structure for table `survei-unsur`
 --
 
-CREATE TABLE `tanya` (
-  `id_tanya` int(12) NOT NULL,
-  `id_unsur` int(12) NOT NULL,
-  `id_survei` int(12) NOT NULL,
-  `txt_tanya` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+CREATE TABLE `survei-unsur` (
+  `id` int(11) UNSIGNED NOT NULL,
+  `ref_id` int(11) UNSIGNED NOT NULL,
+  `survei_id` int(11) UNSIGNED NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `unit-layanan`
+--
+
+CREATE TABLE `unit-layanan` (
+  `id` int(11) UNSIGNED NOT NULL,
+  `nama` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `unit-layanan`
+--
+
+INSERT INTO `unit-layanan` (`id`, `nama`) VALUES
+(1, 'Kecamatan Sekupang');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `user-opd`
+--
+
+CREATE TABLE `user-opd` (
+  `id` int(11) UNSIGNED NOT NULL,
+  `email` varchar(100) NOT NULL,
+  `api-key` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -137,137 +233,229 @@ CREATE TABLE `tanya` (
 --
 
 CREATE TABLE `website` (
-  `id_website` int(12) NOT NULL,
-  `domain` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+  `id` int(11) UNSIGNED NOT NULL,
+  `domain` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `website`
+--
+
+INSERT INTO `website` (`id`, `domain`) VALUES
+(2, 'asda'),
+(1, 'kecsekupang.batam.go.id');
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `domain_survei`
+-- Indexes for table `domain-survei`
 --
-ALTER TABLE `domain_survei`
-  ADD PRIMARY KEY (`id_domain_survei`);
+ALTER TABLE `domain-survei`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `domain-survei_website_id_foreign` (`website_id`),
+  ADD KEY `domain-survei_layanan_id_foreign` (`layanan_id`);
 
 --
--- Indexes for table `jawab`
+-- Indexes for table `jawaban`
 --
-ALTER TABLE `jawab`
-  ADD PRIMARY KEY (`id_jawab`);
+ALTER TABLE `jawaban`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `jawaban_pertanyaan_id_foreign` (`pertanyaan_id`);
 
 --
 -- Indexes for table `layanan`
 --
 ALTER TABLE `layanan`
-  ADD PRIMARY KEY (`id_layanan`),
-  ADD KEY `id_opd` (`id_opd`);
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `layanan_unit_id_foreign` (`unit_id`);
 
 --
--- Indexes for table `opd`
+-- Indexes for table `migrations`
 --
-ALTER TABLE `opd`
-  ADD PRIMARY KEY (`id_opd`);
+ALTER TABLE `migrations`
+  ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `ref_unsur`
+-- Indexes for table `pertanyaan`
 --
-ALTER TABLE `ref_unsur`
-  ADD PRIMARY KEY (`id_ref_unsur`);
+ALTER TABLE `pertanyaan`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `pertanyaan_ref_id_foreign` (`ref_id`);
+
+--
+-- Indexes for table `ref-unsur`
+--
+ALTER TABLE `ref-unsur`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `respon`
 --
 ALTER TABLE `respon`
-  ADD PRIMARY KEY (`id_respon`);
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `respon_jawaban_id_foreign` (`jawaban_id`);
 
 --
 -- Indexes for table `survei`
 --
 ALTER TABLE `survei`
-  ADD PRIMARY KEY (`id_survei`),
-  ADD KEY `id_layanan` (`id_layanan`);
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `survei_layanan_id_foreign` (`layanan_id`);
 
 --
--- Indexes for table `tanya`
+-- Indexes for table `survei-unsur`
 --
-ALTER TABLE `tanya`
-  ADD PRIMARY KEY (`id_tanya`);
+ALTER TABLE `survei-unsur`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `survei-unsur_ref_id_foreign` (`ref_id`),
+  ADD KEY `survei-unsur_survei_id_foreign` (`survei_id`);
+
+--
+-- Indexes for table `unit-layanan`
+--
+ALTER TABLE `unit-layanan`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `user-opd`
+--
+ALTER TABLE `user-opd`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `email` (`email`),
+  ADD UNIQUE KEY `api-key` (`api-key`);
 
 --
 -- Indexes for table `website`
 --
 ALTER TABLE `website`
-  ADD PRIMARY KEY (`id_website`);
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `domain` (`domain`);
 
 --
 -- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT for table `domain_survei`
+-- AUTO_INCREMENT for table `domain-survei`
 --
-ALTER TABLE `domain_survei`
-  MODIFY `id_domain_survei` int(12) NOT NULL AUTO_INCREMENT;
+ALTER TABLE `domain-survei`
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT for table `jawab`
+-- AUTO_INCREMENT for table `jawaban`
 --
-ALTER TABLE `jawab`
-  MODIFY `id_jawab` int(12) NOT NULL AUTO_INCREMENT;
+ALTER TABLE `jawaban`
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 
 --
 -- AUTO_INCREMENT for table `layanan`
 --
 ALTER TABLE `layanan`
-  MODIFY `id_layanan` int(12) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT for table `ref_unsur`
+-- AUTO_INCREMENT for table `migrations`
 --
-ALTER TABLE `ref_unsur`
-  MODIFY `id_ref_unsur` int(12) NOT NULL AUTO_INCREMENT;
+ALTER TABLE `migrations`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+
+--
+-- AUTO_INCREMENT for table `pertanyaan`
+--
+ALTER TABLE `pertanyaan`
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `ref-unsur`
+--
+ALTER TABLE `ref-unsur`
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `respon`
 --
 ALTER TABLE `respon`
-  MODIFY `id_respon` int(12) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `survei`
 --
 ALTER TABLE `survei`
-  MODIFY `id_survei` int(12) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT for table `tanya`
+-- AUTO_INCREMENT for table `survei-unsur`
 --
-ALTER TABLE `tanya`
-  MODIFY `id_tanya` int(12) NOT NULL AUTO_INCREMENT;
+ALTER TABLE `survei-unsur`
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `unit-layanan`
+--
+ALTER TABLE `unit-layanan`
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `user-opd`
+--
+ALTER TABLE `user-opd`
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `website`
 --
 ALTER TABLE `website`
-  MODIFY `id_website` int(12) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- Constraints for dumped tables
 --
 
 --
+-- Constraints for table `domain-survei`
+--
+ALTER TABLE `domain-survei`
+  ADD CONSTRAINT `domain-survei_layanan_id_foreign` FOREIGN KEY (`layanan_id`) REFERENCES `layanan` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `domain-survei_website_id_foreign` FOREIGN KEY (`website_id`) REFERENCES `website` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `jawaban`
+--
+ALTER TABLE `jawaban`
+  ADD CONSTRAINT `jawaban_pertanyaan_id_foreign` FOREIGN KEY (`pertanyaan_id`) REFERENCES `pertanyaan` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
 -- Constraints for table `layanan`
 --
 ALTER TABLE `layanan`
-  ADD CONSTRAINT `layanan_ibfk_1` FOREIGN KEY (`id_opd`) REFERENCES `opd` (`id_opd`);
+  ADD CONSTRAINT `layanan_unit_id_foreign` FOREIGN KEY (`unit_id`) REFERENCES `unit-layanan` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `pertanyaan`
+--
+ALTER TABLE `pertanyaan`
+  ADD CONSTRAINT `pertanyaan_ref_id_foreign` FOREIGN KEY (`ref_id`) REFERENCES `ref-unsur` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `respon`
+--
+ALTER TABLE `respon`
+  ADD CONSTRAINT `respon_jawaban_id_foreign` FOREIGN KEY (`jawaban_id`) REFERENCES `jawaban` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `survei`
 --
 ALTER TABLE `survei`
-  ADD CONSTRAINT `survei_ibfk_1` FOREIGN KEY (`id_layanan`) REFERENCES `layanan` (`id_layanan`);
+  ADD CONSTRAINT `survei_layanan_id_foreign` FOREIGN KEY (`layanan_id`) REFERENCES `layanan` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `survei-unsur`
+--
+ALTER TABLE `survei-unsur`
+  ADD CONSTRAINT `survei-unsur_ref_id_foreign` FOREIGN KEY (`ref_id`) REFERENCES `ref-unsur` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `survei-unsur_survei_id_foreign` FOREIGN KEY (`survei_id`) REFERENCES `survei` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
