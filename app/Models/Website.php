@@ -14,7 +14,7 @@ class Website extends Model{
                         ->getResultArray();
         } else {
             return $this->table('website')
-                        ->where('website_id', $id)
+                        ->where('id_website', $id)
                         ->get()
                         ->getRowArray();
         }
@@ -23,7 +23,7 @@ class Website extends Model{
     // fungsi delete data
     public function deleteById($id){
         return $this->table('website')
-                    ->where('website_id', $id)
+                    ->where('id_website', $id)
                     ->delete();
     }
 
@@ -39,6 +39,6 @@ class Website extends Model{
     // fungsi update
     public function updateWhereID($data, $id){
         return $this->table('website')
-                    ->update($data, ['website_id' => $id]);
+                    ->update($data, ['id_website' => $id]);
     }
 }

@@ -20,10 +20,12 @@ class WebsiteModel extends Model
         $builder = $this->db->table('website');
         // Table Website
         if ($id == FALSE) {
-            $builder->orderBy('id_website', 'DESC');
+            $builder->orderBy('id', 'DESC');
             return $builder->get()->getResult();
         }
 
-        return $builder->getWhere(['id_website' => $id])->getRow();
+        return $builder->getWhere(['id' => $id])->getRow();
     }
+
+    
 }

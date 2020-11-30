@@ -6,7 +6,8 @@ class Testing extends BaseController
 {
     public function index()
     {
-        return view('admin/index');
+        $data['title'] = "Dashboard Admin";
+        return view('admin/index', $data);
     }
     public function login()
     {

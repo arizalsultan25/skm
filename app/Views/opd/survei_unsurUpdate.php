@@ -1,45 +1,46 @@
-<?= $this->extend('admin/layouts/template'); ?>
+<?= $this->extend('opd/layouts/template'); ?>
 
 <?= $this->section('content'); ?>
 <section class="content-header">
     <div class="container-fluid">
         <div class="row mb-2">
             <div class="col-sm-6">
-                <h1>Jawaban</h1>
+                <h1>Unsur Survei</h1>
             </div>
             <div class="col-sm-6">
                 <ol class="breadcrumb float-sm-right">
                     <li class="breadcrumb-item"><a href="#">Home</a></li>
-                    <li class="breadcrumb-item active">Jawaban</li>
+                    <li class="breadcrumb-item active">Unsur-Survei</li>
                 </ol>
             </div>
         </div>
         <div class="row">
             <div class="col-12">
                 <div class="card">
-                    <form action="/admin/jawaban/update/<?= $jawaban->id ?>" method="POST">
+                    <form action="/opd/unsur-survei/update/<?= $sUnsur->id ?>" method="POST">
+                        <input type="hidden" name="id" value="<?= $sUnsur->id ?>">
                         <?= csrf_field(); ?>
-                        <input type="hidden" name="id" value="<?= $jawaban->id ?>">
                         <div class="card-header bg-primary">
-                            Update Jawaban
+                            Update Unsur Survei
                         </div>
                         <div class="card-body">
                             <div class="form-group">
-                                <label>Pertanyaan</label>
+                                <label>Referensi Unsur</label>
                                 <select name="ref_id" class="custom-select">
-                                    <option selected>Pilih Pertanyaan</option>
-                                    <?php foreach ($pertanyaan as $item) : ?>
-                                        <option value="<?= $item->id ?>" <?= ($item->id == $jawaban->pertanyaan_id) ? 'selected' : '' ?>><?= $item->pertanyaan ?></option>
+                                    <option selected>Pilih Survei</option>
+                                    <?php foreach ($refUnsur as $item) : ?>
+                                        <option value="<?= $item->id ?>" <?= ($item->id == $sUnsur->ref_id) ? 'selected' : '' ?>><?= $item->nama ?></option>
                                     <?php endforeach; ?>
                                 </select>
                             </div>
                             <div class="form-group">
-                                <label>Jawaban</label>
-                                <input type="text" class="form-control" name="jawaban" value="<?= $jawaban->jawaban ?>" placeholder="Tulis Jawaban">
-                            </div>
-                            <div class="form-group">
-                                <label>Bobot</label>
-                                <input type="number" class="form-control" name="nilai" value="<?= $jawaban->nilai ?>" placeholder="Tulis Bobot">
+                                <label>Nama Unsur</label>
+                                <select name="survei_id" class="custom-select">
+                                    <option selected>Pilih Nama Unsur</option>
+                                    <?php foreach ($survei as $item) : ?>
+                                        <option value="<?= $item->id ?>" <?= ($item->id == $sUnsur->survei_id) ? 'selected' : '' ?>><?= $item->nama ?></option>
+                                    <?php endforeach; ?>
+                                </select>
                             </div>
                         </div>
                         <div class="card-footer">

@@ -36,12 +36,25 @@ class PertanyaanModel extends Model
         return $builder->get()->getRow();
     }
 
-    public function getPertanyaan($id)
+    public function getPertanyaan($id = FALSE)
     {
-        $builder = $this->db->table('survei-unsur a');
+        $builder = $this->db->table('pertanyaan a');
         $builder->select("a.*, b.id as id_pertanyaan, b.pertanyaan, b.ref_id as ref_pertanyaan");
         $builder->join('pertanyaan b', 'b.ref_id = a.ref_id');
-        $builder->where('a.survei_id', $id);
+        $builder->where('a.id', $id);
+        return $builder->get()->getResult();
+    }
+
+    public function getAllPertanyaan($id = FALSE)
+    {
+        $builder = $this->db->table('pertanyaan a');
+        if ($id != FALSE) {
+            $builder->where('a.id', $id);
+            return $builder->get()->getRow();
+        }
+        $builder->select('a.*, b.nama');
+        $builder->join('ref-unsur b', 'b.id = a.ref_id');
+        $builder->orderBy('a.id', 'DESC');
         return $builder->get()->getResult();
     }
 

@@ -90,7 +90,7 @@
                         <img src="<?= base_url('assets/admin-lte') ?>/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
                     </div>
                     <div class="info">
-                        <a href="#" class="d-block">Admin Diskominfo</a>
+                        <a href="#" class="d-block">Admin OPD</a>
                     </div>
                 </div>
 
@@ -101,7 +101,7 @@
                with font-awesome or any other icon font library -->
                         <li class="nav-item">
                             
-                            <a href="<?= base_url('testing') ?>" class="nav-link">
+                            <a href="<?= base_url('opd') ?>" class="nav-link">
                                 <i class="nav-icon fas fa-th"></i>
                                 <p>
                                     Dashboard
@@ -110,23 +110,7 @@
                         </li>
                         <li class="nav-header">OPERASIONAL</li>
                         <li class="nav-item">
-                            <a href="<?= base_url('admin/website/') ?>" class="nav-link">
-                                <i class="nav-icon fas fa-tachometer-alt"></i>
-                                <p>
-                                    Website
-                                </p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="<?= base_url('admin/unitlayanan/') ?>" class="nav-link">
-                                <i class="nav-icon fas fa-tachometer-alt"></i>
-                                <p>
-                                    Unit Layanan
-                                </p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="<?= base_url('admin/layanan') ?>" class="nav-link">
+                            <a href="<?= base_url('opd/layanan') ?>" class="nav-link">
                                 <i class="nav-icon fas fa-tachometer-alt"></i>
                                 <p>
                                     Layanan
@@ -134,7 +118,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="<?= base_url('admin/domainsurvei/') ?>" class="nav-link">
+                            <a href="<?= base_url('opd/domainsurvei/') ?>" class="nav-link">
                                 <i class="nav-icon fas fa-tachometer-alt"></i>
                                 <p>
                                     Domain Survei
@@ -142,7 +126,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="<?= base_url('admin/referensiunsur/') ?>" class="nav-link">
+                            <a href="<?= base_url('opd/referensiunsur/') ?>" class="nav-link">
                                 <i class="nav-icon fas fa-tachometer-alt"></i>
                                 <p>
                                     Referensi Unsur
@@ -150,7 +134,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="<?= base_url('admin/pertanyaan/') ?>" class="nav-link">
+                            <a href="<?= base_url('opd/pertanyaan/') ?>" class="nav-link">
                                 <i class="nav-icon fas fa-tachometer-alt"></i>
                                 <p>
                                     Pertanyaan
@@ -158,7 +142,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="<?= base_url('admin/jawaban/') ?>" class="nav-link">
+                            <a href="<?= base_url('opd/jawaban/') ?>" class="nav-link">
                                 <i class="nav-icon fas fa-tachometer-alt"></i>
                                 <p>
                                     Jawaban
@@ -166,7 +150,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="<?= base_url('admin/survei/') ?>" class="nav-link">
+                            <a href="<?= base_url('opd/survei/') ?>" class="nav-link">
                                 <i class="nav-icon fas fa-tachometer-alt"></i>
                                 <p>
                                     Survei
@@ -174,7 +158,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="<?= base_url('admin/surveiunsur/') ?>" class="nav-link">
+                            <a href="<?= base_url('opd/surveiunsur/') ?>" class="nav-link">
                                 <i class="nav-icon fas fa-tachometer-alt"></i>
                                 <p>
                                     Unsur Survei

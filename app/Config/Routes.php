@@ -90,6 +90,44 @@ $routes->group('admin', function ($routes) {
 });
 
 
+$routes->group('opd', function ($routes) {
+
+	$routes->add('layanan', 'Opd\Layanan::index');
+	$routes->add('layanan/create', 'Opd\Layanan::create');
+	$routes->add('layanan/update/(:num)', 'Opd\Layanan::update/$1');
+	$routes->delete('layanan/(:num)', 'Opd\Layanan::delete/$1');
+
+	$routes->add('domainsurvei', 'Opd\DomainSurvei::index');
+	$routes->add('domainsurvei/create', 'Opd\DomainSurvei::create');
+	$routes->add('domainsurvei/update/(:num)', 'Opd\DomainSurvei::update/$1');
+	$routes->delete('domainsurvei/(:num)', 'Opd\DomainSurvei::delete/$1');
+
+	$routes->get('survei', 'Opd\Survei::index');
+	$routes->get('survei/create', 'Opd\Survei::create');
+	$routes->get('survei/update(:num)', 'Opd\Survei::update/$1');
+	$routes->delete('survei/(:num)', 'Opd\Survei::delete/$1');
+
+	$routes->get('referensi-unsur', 'Opd\ReferensiUnsur::index');
+	$routes->post('referensi-unsur/create', 'Opd\ReferensiUnsur::create');
+	$routes->add('referensi-unsur/update/(:num)', 'Opd\ReferensiUnsur::update/$1');
+	$routes->delete('referensi-unsur/(:num)', 'Opd\ReferensiUnsur::delete/$1');
+
+	$routes->get('pertanyaan', 'Opd\Pertanyaan::index');
+	$routes->post('pertanyaan/create', 'Opd\Pertanyaan::create');
+	$routes->post('pertanyaan/update/(:num)', 'Opd\Pertanyaan::update/$1');
+	$routes->delete('pertanyaan/(:num)', 'Opd\Pertanyaan::delete/$1');
+
+	$routes->get('jawaban', 'Opd\Jawaban::index');
+	$routes->post('jawaban/create', 'Opd\Jawaban::create');
+	$routes->post('jawaban/update/(:num)', 'Opd\Jawaban::update/$1');
+	$routes->delete('jawaban/(:num)', 'Opd\Jawaban::delete/$1');
+
+	$routes->get('unsur-survei', 'Opd\SurveiUnsur::index');
+	$routes->post('unsur-survei/create', 'Opd\SurveiUnsur::create');
+	$routes->add('unsur-survei/update/(:num)', 'Opd\SurveiUnsur::update/$1');
+	$routes->delete('unsur-survei/(:num)', 'Opd\SurveiUnsur::delete/$1');
+
+});
 /**
  * --------------------------------------------------------------------
  * Additional Routing

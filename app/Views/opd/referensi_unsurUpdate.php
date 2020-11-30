@@ -1,34 +1,35 @@
-<?= $this->extend('admin/layouts/template'); ?>
+<?= $this->extend('opd/layouts/template'); ?>
 
 <?= $this->section('content'); ?>
 <section class="content-header">
     <div class="container-fluid">
         <div class="row mb-2">
-            <div class="col-6">
-                <h1>Website</h1>
+            <div class="col-sm-6">
+                <h1>Referensi Unsur</h1>
             </div>
             <div class="col-sm-6">
                 <ol class="breadcrumb float-sm-right">
                     <li class="breadcrumb-item"><a href="#">Home</a></li>
-                    <li class="breadcrumb-item active">Wesbite</li>
+                    <li class="breadcrumb-item active">Referensi Unsur</li>
                 </ol>
             </div>
         </div>
         <div class="row">
-            <div class="col-sm-12">
+            <div class="col-12">
                 <div class="card">
-                    <form action="/admin/website/update/<?= $web->id ?>" method="POST">
-                        <input type="hidden" name="website_id" value="<?php echo $web->id; ?>">
-                        <div class="card-header bg-primary">
-                            Update Website
+                    <form action="/opd/referensi-unsur/update/<?= $ref->id ?>" method="POST">
+                        <?= csrf_field(); ?>
+                        <input type="hidden" name="id_referensi" value="<?php echo $ref->id; ?>">
+                        <!-- <input type="hidden" name="_method" value="GET"> -->
+                        <div class="card-header bg-warning">
+                            Update Referensi Unsur
                         </div>
                         <div class="card-body">
-                            <?= csrf_field(); ?>
                             <div class="form-group">
-                                <label for="">Domain </label>
-                                <input type="text" name="domain" value="<?php echo (old('domain')) ? old('domain') : $web->domain ?>" class="form-control <?php echo ($validation->hasError('domain')) ? 'is-invalid' : ''; ?>">
+                                <label for="">Nama Unsur</label>
+                                <input type="text" name="nama" value="<?php echo (old('nama')) ? old('nama') : $ref->nama ?>" class="form-control <?php echo ($validation->hasError('nama')) ? 'is-invalid' : ''; ?>">
                                 <div class="invalid-feedback">
-                                    <?php echo $validation->getError('domain'); ?>
+                                    <?php echo $validation->getError('nama'); ?>
                                 </div>
                             </div>
                         </div>
@@ -38,6 +39,7 @@
                     </form>
                 </div>
             </div>
+
         </div>
     </div>
 </section>

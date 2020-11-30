@@ -1,4 +1,4 @@
-<?= $this->extend('admin/layouts/template'); ?>
+<?= $this->extend('opd/layouts/template'); ?>
 
 <?= $this->section('content'); ?>
 <section class="content-header">
@@ -17,7 +17,7 @@
         <div class="row">
             <div class="col-12">
                 <div class="card">
-                    <form action="/admin/jawaban/update/<?= $jawaban->id ?>" method="POST">
+                    <form action="/opd/jawaban/update/<?= $jawaban->id ?>" method="POST">
                         <?= csrf_field(); ?>
                         <input type="hidden" name="id" value="<?= $jawaban->id ?>">
                         <div class="card-header bg-primary">

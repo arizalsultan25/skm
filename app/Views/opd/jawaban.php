@@ -1,4 +1,4 @@
-<?= $this->extend('admin/layouts/template'); ?>
+<?= $this->extend('opd/layouts/template'); ?>
 
 <?= $this->section('content'); ?>
 <section class="content-header">
@@ -17,7 +17,7 @@
         <div class="row">
             <div class="col-12">
                 <div class="card">
-                    <form action="/admin/jawaban/create" method="POST">
+                    <form action="/opd/jawaban/create" method="POST">
                         <?= csrf_field(); ?>
                         <div class="card-header bg-primary">
                             Tambah Jawaban
@@ -81,8 +81,8 @@
                                         <td><?= $item->jawaban ?></td>
                                         <td><?= $item->nilai ?></td>
                                         <td>
-                                            <a href="/admin/jawaban/update/<?= $item->id ?>" class="btn btn-sm btn-warning">Edit</a>
-                                            <form action="/admin/jawaban/<?= $item->id ?>" class="d-inline" method="POST">
+                                            <a href="/opd/jawaban/update/<?= $item->id ?>" class="btn btn-sm btn-warning">Edit</a>
+                                            <form action="/opd/jawaban/<?= $item->id ?>" class="d-inline" method="POST">
                                                 <?= csrf_field(); ?>
                                                 <input type="hidden" name="_method" value="DELETE">
                                                 <button type="submit" class="btn btn-sm btn-danger" onclick="return confirm('apakah anda yakin?');">Delete</button>

@@ -1,51 +1,51 @@
-<?= $this->extend('admin/layouts/template'); ?>
+<?= $this->extend('opd/layouts/template'); ?>
 
 <?= $this->section('content'); ?>
 <section class="content-header">
     <div class="container-fluid">
         <div class="row mb-2">
             <div class="col-sm-6">
-                <h1>Jawaban</h1>
+                <h1>Survei</h1>
             </div>
             <div class="col-sm-6">
                 <ol class="breadcrumb float-sm-right">
                     <li class="breadcrumb-item"><a href="#">Home</a></li>
-                    <li class="breadcrumb-item active">Jawaban</li>
+                    <li class="breadcrumb-item active">Survei</li>
                 </ol>
             </div>
         </div>
         <div class="row">
             <div class="col-12">
                 <div class="card">
-                    <form action="/admin/jawaban/create" method="POST">
-                        <?= csrf_field(); ?>
-                        <div class="card-header bg-primary">
-                            Tambah Jawaban
-                        </div>
+                    <div class="card-header bg-primary">
+                        Tambah Survei
+                    </div>
+                    <form action="/opd/survei/create" method="POST">
                         <div class="card-body">
+                            <?= csrf_field(); ?>
                             <div class="form-group">
-                                <label>Pertanyaan</label>
-                                <select name="ref_id" class="custom-select">
-                                    <option selected>Pilih Pertanyaan</option>
-                                    <?php foreach ($pertanyaan as $item) : ?>
-                                        <option value="<?= $item->id ?>"><?= $item->pertanyaan ?></option>
+                                <label>Nama Survei</label>
+                                <input type="text" placeholder="Nama Survei" name="nama" value="<?php echo old('nama'); ?>" class="form-control <?php echo ($validation->hasError('nama')) ? 'is-invalid' : ''; ?>">
+                                <div class="invalid-feedback">
+                                    <?php echo $validation->getError('nama'); ?>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Layanan</label>
+                                <select name="layanan_id" class="custom-select">
+                                    <option selected>Pilih Layanan</option>
+                                    <?php foreach ($layanan as $item) : ?>
+                                        <option value="<?= $item->id; ?>"><?= $item->nama; ?></option>
                                     <?php endforeach; ?>
                                 </select>
                             </div>
                             <div class="form-group">
-                                <label>Jawaban</label>
-                                <input type="text" class="form-control" name="jawaban" placeholder="Tulis Jawaban">
+                                <label>Mulai Survei</label>
+                                <input type="datetime-local" id="birthdaytime" name="start" class="form-control">
                             </div>
                             <div class="form-group">
-                                <label>Bobot</label>
-                                <select name='bobot' class="custom-select">
-                                    <option selected>Pilih Bobot</option>
-                                    <option value='1'>1</option>
-                                    <option value='2'>2</option>
-                                    <option value='3'>3</option>
-                                    <option value='4'>4</option>
-                                </select>
-                                <!-- <input type="number" class="form-control" name="bobot" placeholder="Tulis Bobot"> -->
+                                <label>Batas Survei</label>
+                                <input type="datetime-local" id="birthdaytime" name="end" class="form-control">
                             </div>
                         </div>
                         <div class="card-footer">
@@ -57,32 +57,34 @@
             <div class="col-12">
                 <div class="card">
                     <div class="card-header">
-                        Daftar Jawaban
+                        Daftar Survei
                     </div>
                     <div class="card-body">
                         <table id="example" class="table table-sm table-striped table-bordered" style=" width:100%">
                             <thead>
                                 <tr>
                                     <th>#</th>
-                                    <th>Pertanyaan</th>
-                                    <th>Jawaban</th>
-                                    <th>Bobot</th>
+                                    <th>Nama Survei</th>
+                                    <th>Layanan</th>
+                                    <th>Mulai Survei</th>
+                                    <th>Batas Survei</th>
                                     <th>Option</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <?php
                                 $no = 1;
-                                foreach ($jawaban as $item) :
+                                foreach ($survei as $item) :
                                 ?>
                                     <tr>
-                                        <td><?= $no++ ?></td>
-                                        <td><?= $item->pertanyaan ?></td>
-                                        <td><?= $item->jawaban ?></td>
-                                        <td><?= $item->nilai ?></td>
+                                        <td><?= $no++; ?></td>
+                                        <td><?= $item->nama; ?></td>
+                                        <td><?= $item->nama_layanan; ?></td>
+                                        <td><?= $item->start; ?></td>
+                                        <td><?= $item->end; ?></td>
                                         <td>
-                                            <a href="/admin/jawaban/update/<?= $item->id ?>" class="btn btn-sm btn-warning">Edit</a>
-                                            <form action="/admin/jawaban/<?= $item->id ?>" class="d-inline" method="POST">
+                                            <a href="/opd/survei/update/<?= $item->id; ?>" class="btn btn-sm btn-warning">Edit</a>
+                                            <form action="/opd/survei/<?= $item->id ?>" class="d-inline" method="POST">
                                                 <?= csrf_field(); ?>
                                                 <input type="hidden" name="_method" value="DELETE">
                                                 <button type="submit" class="btn btn-sm btn-danger" onclick="return confirm('apakah anda yakin?');">Delete</button>

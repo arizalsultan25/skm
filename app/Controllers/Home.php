@@ -19,6 +19,9 @@ class Home extends BaseController
 			
 			return redirect()->to('/testing');
 			
+		} else if ($email == "admin@opd.co.id" && $pass == "admin_opd"){
+			
+			return redirect()->to('/Opd/');
 		}else{
 			
 			return redirect()->to('/');			
