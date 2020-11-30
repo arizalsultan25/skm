@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 20, 2020 at 11:00 AM
+-- Generation Time: Nov 30, 2020 at 10:20 AM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.2
 
@@ -54,6 +54,14 @@ CREATE TABLE `jawaban` (
   `nilai` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Dumping data for table `jawaban`
+--
+
+INSERT INTO `jawaban` (`id`, `pertanyaan_id`, `jawaban`, `nilai`) VALUES
+(42, 2, 'Terjangkau', 3),
+(43, 1, 'Tidak Cepat', 1);
+
 -- --------------------------------------------------------
 
 --
@@ -71,7 +79,8 @@ CREATE TABLE `layanan` (
 --
 
 INSERT INTO `layanan` (`id`, `unit_id`, `nama`) VALUES
-(1, 1, 'Pengesahan SPPT');
+(1, 1, 'Pengesahan SPPT'),
+(3, 1, 'Layanan Pemberdayaan UMKM');
 
 -- --------------------------------------------------------
 
@@ -123,7 +132,8 @@ CREATE TABLE `pertanyaan` (
 --
 
 INSERT INTO `pertanyaan` (`id`, `ref_id`, `pertanyaan`) VALUES
-(1, 3, 'Bagaimana pendapat Saudara tentang kecepatan waktu dalam memberikan pelayanan?');
+(1, 3, 'Bagaimana pendapat Saudara tentang kecepatan waktu dalam memberikan pelayanan?'),
+(2, 4, 'Apakah tarif pelayanan terjangkau?');
 
 -- --------------------------------------------------------
 
@@ -196,6 +206,13 @@ CREATE TABLE `survei-unsur` (
   `survei_id` int(11) UNSIGNED NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Dumping data for table `survei-unsur`
+--
+
+INSERT INTO `survei-unsur` (`id`, `ref_id`, `survei_id`) VALUES
+(1, 1, 1);
+
 -- --------------------------------------------------------
 
 --
@@ -242,7 +259,6 @@ CREATE TABLE `website` (
 --
 
 INSERT INTO `website` (`id`, `domain`) VALUES
-(2, 'asda'),
 (1, 'kecsekupang.batam.go.id');
 
 --
@@ -341,19 +357,19 @@ ALTER TABLE `website`
 -- AUTO_INCREMENT for table `domain-survei`
 --
 ALTER TABLE `domain-survei`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `jawaban`
 --
 ALTER TABLE `jawaban`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=44;
 
 --
 -- AUTO_INCREMENT for table `layanan`
 --
 ALTER TABLE `layanan`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `migrations`
@@ -365,13 +381,13 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT for table `pertanyaan`
 --
 ALTER TABLE `pertanyaan`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `ref-unsur`
 --
 ALTER TABLE `ref-unsur`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `respon`
@@ -389,13 +405,13 @@ ALTER TABLE `survei`
 -- AUTO_INCREMENT for table `survei-unsur`
 --
 ALTER TABLE `survei-unsur`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `unit-layanan`
 --
 ALTER TABLE `unit-layanan`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `user-opd`
@@ -407,7 +423,7 @@ ALTER TABLE `user-opd`
 -- AUTO_INCREMENT for table `website`
 --
 ALTER TABLE `website`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- Constraints for dumped tables
@@ -424,7 +440,7 @@ ALTER TABLE `domain-survei`
 -- Constraints for table `jawaban`
 --
 ALTER TABLE `jawaban`
-  ADD CONSTRAINT `jawaban_pertanyaan_id_foreign` FOREIGN KEY (`pertanyaan_id`) REFERENCES `pertanyaan` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `jawaban_pertanyaan_id_foreign` FOREIGN KEY (`pertanyaan_id`) REFERENCES `ref-unsur` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `layanan`
