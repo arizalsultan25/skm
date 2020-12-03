@@ -20,7 +20,7 @@ class ReferensiUnsur extends BaseController
             'validation' => \Config\Services::validation()
         ];
 
-        return view('Opd/referensi_unsur', $data);
+        return view('opd/referensi_unsur', $data);
     }
 
     public function create()
@@ -28,13 +28,13 @@ class ReferensiUnsur extends BaseController
         if (!$this->validate(
             ['nama' => 'required|is_unique[ref-unsur.nama]']
         )) {
-            return redirect()->to('/Opd/website')->withInput();
+            return redirect()->to('/opd/website')->withInput();
         }
         $this->referensiModel->save([
             'nama' => $this->request->getVar('nama')
         ]);
         session()->setFlashdata('pesan', 'Nama Unsur berhasil ditambahkan');
-        return redirect()->to('/Opd/referensiunsur');
+        return redirect()->to('/opd/referensiunsur');
     }
 
     public function update($id)
@@ -45,12 +45,12 @@ class ReferensiUnsur extends BaseController
                 'ref' => $this->referensiModel->getReferensi($id),
                 'validation' => \Config\Services::validation()
             ];
-            return view('Opd/referensi_unsurUpdate', $data);
+            return view('opd/referensi_unsurUpdate', $data);
         } else {
             if (!$this->validate([
                 'nama' => "required|is_unique[ref-unsur.nama,id,{$this->request->getVar('id_referensi')}]"
             ])) {
-                return redirect()->to('/Opd/referensi/update' . $id)->withInput();
+                return redirect()->to('/opd/referensi/update' . $id)->withInput();
             }
 
             $this->referensiModel->save([
@@ -59,7 +59,7 @@ class ReferensiUnsur extends BaseController
             ]);
 
             session()->setFlashdata('pesan', 'Referensi Unsur berhasil Diubah');
-            return redirect()->to('/Opd/referensiunsur');
+            return redirect()->to('/opd/referensiunsur');
         }
     }
 
@@ -67,7 +67,7 @@ class ReferensiUnsur extends BaseController
     {
         $this->referensiModel->delete($id);
         session()->setFlashdata('pesan', 'Referensi Unsur berhasil dihapus!');
-        return redirect()->to('/Opd/referensiunsur');
+        return redirect()->to('/opd/referensiunsur');
     }
 
     //--------------------------------------------------------------------

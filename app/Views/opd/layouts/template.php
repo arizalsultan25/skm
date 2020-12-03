@@ -71,7 +71,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="<?= base_url('admin/login.php') ?>" class="nav-link" onclick="return confirm('apakah anda yakin ingin keluar?');">
+                    <a href="<?= base_url() ?>" class="nav-link" onclick="return confirm('apakah anda yakin ingin keluar?');">
                         <p>
                         Logout
                         </p>
