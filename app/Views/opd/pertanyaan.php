@@ -21,7 +21,7 @@
                     <div class="card-header bg-primary">
                         Tambah Pertanyaan
                     </div>
-                    <form action="/opd/pertanyaan/create" method="POST">
+                    <form action="/Opd/pertanyaan/create" method="POST">
                         <?= csrf_field(); ?>
                         <div class="card-body">
                             <div class="form-group">
@@ -68,8 +68,8 @@
                                         <td><?= $item->nama ?></td>
                                         <td><?= $item->pertanyaan ?></td>
                                         <td>
-                                            <a href="/opd/pertanyaan/update/<?= $item->id ?>" class="btn btn-sm btn-warning">Edit</a>
-                                            <form action="/opd/pertanyaan/<?= $item->id ?>" class="d-inline" method="POST">
+                                            <a href="/Opd/pertanyaan/update/<?= $item->id ?>" class="btn btn-sm btn-warning">Edit</a>
+                                            <form action="/Opd/pertanyaan/<?= $item->id ?>" class="d-inline" method="POST">
                                                 <?= csrf_field(); ?>
                                                 <input type="hidden" name="_method" value="DELETE">
                                                 <button type="submit" class="btn btn-sm btn-danger" onclick="return confirm('apakah anda yakin?');">Delete</button>

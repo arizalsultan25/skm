@@ -17,7 +17,7 @@
         <div class="row">
             <div class="col-12">
                 <div class="card">
-                    <form action="/opd/unsur-survei/create" method="POST">
+                    <form action="/Opd/unsur-survei/create" method="POST">
                         <?= csrf_field(); ?>
                         <div class="card-header bg-primary">
                             Tambah Unsur Survei
@@ -73,8 +73,8 @@
                                         <td><?= $item->nama_referensi ?></td>
                                         <td><?= $item->nama_survei ?></td>
                                         <td>
-                                            <a href="/opd/unsur-survei/update/<?= $item->id ?>" class="btn btn-sm btn-warning">Edit</a>
-                                            <form action="/opd/unsur-survei/<?= $item->id ?>" class="d-inline" method="POST">
+                                            <a href="/Opd/unsur-survei/update/<?= $item->id ?>" class="btn btn-sm btn-warning">Edit</a>
+                                            <form action="/Opd/unsur-survei/<?= $item->id ?>" class="d-inline" method="POST">
                                                 <?= csrf_field(); ?>
                                                 <input type="hidden" name="_method" value="DELETE">
                                                 <button type="submit" class="btn btn-sm btn-danger" onclick="return confirm('apakah anda yakin?');">Delete</button>

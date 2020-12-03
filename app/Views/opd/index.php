@@ -1,4 +1,4 @@
-<?= $this->extend('Opd/layouts/template'); ?>
+<?= $this->extend('opd/layouts/template'); ?>
 
 <?= $this->section('content'); ?>
 

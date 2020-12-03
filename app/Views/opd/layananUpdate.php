@@ -20,7 +20,7 @@
                     <div class="card-header bg-primary">
                         Update Layanan
                     </div>
-                    <form action="/opd/layanan/update/<?php echo $layanan->id; ?>" method="POST">
+                    <form action="/Opd/layanan/update/<?php echo $layanan->id; ?>" method="POST">
                         <?= csrf_field(); ?>
                         <input type="hidden" name="id_layanan" value="<?php echo $layanan->id; ?>">
                         <div class="card-body">

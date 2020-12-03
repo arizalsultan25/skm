@@ -17,7 +17,7 @@
         <div class="row">
             <div class="col-12">
                 <div class="card">
-                    <form action="/opd/referensiunsur/update/<?= $ref->id ?>" method="POST">
+                    <form action="/Opd/referensiunsur/update/<?= $ref->id ?>" method="POST">
                         <?= csrf_field(); ?>
                         <input type="hidden" name="id_referensi" value="<?php echo $ref->id; ?>">
                         <!-- <input type="hidden" name="_method" value="GET"> -->

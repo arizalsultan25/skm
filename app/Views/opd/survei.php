@@ -20,7 +20,7 @@
                     <div class="card-header bg-primary">
                         Tambah Survei
                     </div>
-                    <form action="/opd/survei/create" method="POST">
+                    <form action="/Opd/survei/create" method="POST">
                         <div class="card-body">
                             <?= csrf_field(); ?>
                             <div class="form-group">
@@ -83,8 +83,8 @@
                                         <td><?= $item->start; ?></td>
                                         <td><?= $item->end; ?></td>
                                         <td>
-                                            <a href="/opd/survei/update/<?= $item->id; ?>" class="btn btn-sm btn-warning">Edit</a>
-                                            <form action="/opd/survei/<?= $item->id ?>" class="d-inline" method="POST">
+                                            <a href="/Opd/survei/update/<?= $item->id; ?>" class="btn btn-sm btn-warning">Edit</a>
+                                            <form action="/Opd/survei/<?= $item->id ?>" class="d-inline" method="POST">
                                                 <?= csrf_field(); ?>
                                                 <input type="hidden" name="_method" value="DELETE">
                                                 <button type="submit" class="btn btn-sm btn-danger" onclick="return confirm('apakah anda yakin?');">Delete</button>
