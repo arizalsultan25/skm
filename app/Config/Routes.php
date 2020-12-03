@@ -48,9 +48,9 @@ $routes->group('admin', function ($routes) {
 	$routes->add('website/update/(:num)', 'Admin\Website::update/$1');
 	$routes->delete('website/(:num)', 'Admin\Website::delete/$1');
 
-	$routes->get('unit-layanan', 'Admin\UnitLayanan::index');
-	$routes->get('unit-layanan/create', 'Admin\UnitLayanan::create');
-	$routes->get('unit-layanan/update/(:num)', 'Admin\UnitLayanan::update/$1');
+	$routes->get('unitlayanan', 'Admin\UnitLayanan::index');
+	$routes->get('unitlayanan/create', 'Admin\UnitLayanan::create');
+	$routes->get('unitlayanan/update/(:num)', 'Admin\UnitLayanan::update/$1');
 	$routes->delete('unitlayanan/(:num)', 'Admin\UnitLayanan::delete/$1');
 
 	$routes->add('layanan', 'Admin\Layanan::index');
@@ -68,10 +68,10 @@ $routes->group('admin', function ($routes) {
 	$routes->get('survei/update(:num)', 'Admin\Survei::update/$1');
 	$routes->delete('survei/(:num)', 'Admin\Survei::delete/$1');
 
-	$routes->get('referensi-unsur', 'Admin\ReferensiUnsur::index');
-	$routes->post('referensi-unsur/create', 'Admin\ReferensiUnsur::create');
-	$routes->add('referensi-unsur/update/(:num)', 'Admin\ReferensiUnsur::update/$1');
-	$routes->delete('referensi-unsur/(:num)', 'Admin\ReferensiUnsur::delete/$1');
+	$routes->get('referensiunsur', 'Admin\ReferensiUnsur::index');
+	$routes->post('referensiunsur/create', 'Admin\ReferensiUnsur::create');
+	$routes->add('referensiunsur/update/(:num)', 'Admin\ReferensiUnsur::update/$1');
+	$routes->delete('referensiunsur/(:num)', 'Admin\ReferensiUnsur::delete/$1');
 
 	$routes->get('pertanyaan', 'Admin\Pertanyaan::index');
 	$routes->post('pertanyaan/create', 'Admin\Pertanyaan::create');
@@ -107,10 +107,10 @@ $routes->group('opd', function ($routes) {
 	$routes->get('survei/update(:num)', 'Opd\Survei::update/$1');
 	$routes->delete('survei/(:num)', 'Opd\Survei::delete/$1');
 
-	$routes->get('referensi-unsur', 'Opd\ReferensiUnsur::index');
-	$routes->post('referensi-unsur/create', 'Opd\ReferensiUnsur::create');
-	$routes->add('referensi-unsur/update/(:num)', 'Opd\ReferensiUnsur::update/$1');
-	$routes->delete('referensi-unsur/(:num)', 'Opd\ReferensiUnsur::delete/$1');
+	$routes->get('referensiunsur', 'Opd\ReferensiUnsur::index');
+	$routes->post('referensiunsur/create', 'Opd\ReferensiUnsur::create');
+	$routes->add('referensiunsur/update/(:num)', 'Opd\ReferensiUnsur::update/$1');
+	$routes->delete('referensiunsur/(:num)', 'Opd\ReferensiUnsur::delete/$1');
 
 	$routes->get('pertanyaan', 'Opd\Pertanyaan::index');
 	$routes->post('pertanyaan/create', 'Opd\Pertanyaan::create');

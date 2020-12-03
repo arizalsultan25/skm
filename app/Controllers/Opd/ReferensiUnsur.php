@@ -34,7 +34,7 @@ class ReferensiUnsur extends BaseController
             'nama' => $this->request->getVar('nama')
         ]);
         session()->setFlashdata('pesan', 'Nama Unsur berhasil ditambahkan');
-        return redirect()->to('/Opd/referensi-unsur');
+        return redirect()->to('/Opd/referensiunsur');
     }
 
     public function update($id)
@@ -59,7 +59,7 @@ class ReferensiUnsur extends BaseController
             ]);
 
             session()->setFlashdata('pesan', 'Referensi Unsur berhasil Diubah');
-            return redirect()->to('/Opd/referensi-unsur');
+            return redirect()->to('/Opd/referensiunsur');
         }
     }
 
@@ -67,7 +67,7 @@ class ReferensiUnsur extends BaseController
     {
         $this->referensiModel->delete($id);
         session()->setFlashdata('pesan', 'Referensi Unsur berhasil dihapus!');
-        return redirect()->to('/Opd/referensi-unsur');
+        return redirect()->to('/Opd/referensiunsur');
     }
 
     //--------------------------------------------------------------------

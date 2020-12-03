@@ -9,7 +9,7 @@
             </div>
             <div class="col-sm-6">
                 <ol class="breadcrumb float-sm-right">
-                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                    <li class="breadcrumb-item"><a href="/testing">Home</a></li>
                     <li class="breadcrumb-item active">Referensi Unsur</li>
                 </ol>
             </div>
@@ -17,7 +17,7 @@
         <div class="row">
             <div class="col-12">
                 <div class="card">
-                    <form action="/admin/referensi-unsur/update/<?= $ref->id ?>" method="POST">
+                    <form action="/admin/referensiunsur/update/<?= $ref->id ?>" method="POST">
                         <?= csrf_field(); ?>
                         <input type="hidden" name="id_referensi" value="<?php echo $ref->id; ?>">
                         <!-- <input type="hidden" name="_method" value="GET"> -->

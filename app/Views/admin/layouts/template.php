@@ -44,7 +44,7 @@
                     <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
                 </li>
                 <li class="nav-item d-none d-sm-inline-block">
-                    <a href="<?= base_url('assets/admin-lte') ?>/index3.html" class="nav-link">Home</a>
+                    <a href="<?= base_url('/testing') ?>" class="nav-link">Home</a>
                 </li>
                 <li class="nav-item d-none d-sm-inline-block">
                     <a href="#" class="nav-link">Contact</a>
@@ -68,6 +68,13 @@
                 <li class="nav-item">
                     <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#" role="button">
                         <i class="fas fa-th-large"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="<?= base_url('admin/login.php') ?>" class="nav-link" onclick="return confirm('apakah anda yakin ingin keluar?');">
+                        <p>
+                        Logout
+                        </p>
                     </a>
                 </li>
             </ul>
@@ -100,7 +107,6 @@
                         <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
                         <li class="nav-item">
-                            
                             <a href="<?= base_url('testing') ?>" class="nav-link">
                                 <i class="nav-icon fas fa-th"></i>
                                 <p>
@@ -198,7 +204,7 @@
             <div class="float-right d-none d-sm-block">
                 <b>Version</b> CodeIgniter 4
             </div>
-            <strong>Copyright SKM &copy; 2020</strong>
+            <strong>SKM &copy; 2020 - Pemerintah Kota Batam</strong>
         </footer>
 
         <!-- Control Sidebar -->
