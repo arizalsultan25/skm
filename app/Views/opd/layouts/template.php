@@ -165,7 +165,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="<?= base_url('opd/surveiunsur/') ?>" class="nav-link">
+                            <a href="<?= base_url('opd/unsur-survei/') ?>" class="nav-link">
                                 <i class="nav-icon fas fa-tachometer-alt"></i>
                                 <p>
                                     Unsur Survei
