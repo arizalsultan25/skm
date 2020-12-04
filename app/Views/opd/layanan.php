@@ -69,7 +69,7 @@
                                         <td><?= $item->nama ?></td>
                                         <td><?= $item->nama_unit ?></td>
                                         <td>
-                                            <a href="/Opd/layanan/update/<?= $item->id; ?>" class="btn btn-sm btn-warning">Edit</a>
+                                            <a href="/opd/layanan/update/<?= $item->id; ?>" class="btn btn-sm btn-warning">Edit</a>
                                             <form action="/Opd/layanan/<?= $item->id ?>" class="d-inline" method="POST">
                                                 <?= csrf_field(); ?>
                                                 <input type="hidden" name="_method" value="DELETE">

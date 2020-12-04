@@ -60,7 +60,7 @@
                                         <td><?= $no++ ?></td>
                                         <td><?= $item->nama ?></td>
                                         <td>
-                                            <a href="/Opd/referensiunsur/update/<?= $item->id ?>" class="btn btn-sm btn-warning">Edit</a>
+                                            <a href="/opd/referensiunsur/update/<?= $item->id ?>" class="btn btn-sm btn-warning">Edit</a>
                                             <form action="/Opd/referensiunsur/<?= $item->id ?>" class="d-inline" method="POST">
                                                 <?= csrf_field(); ?>
                                                 <input type="hidden" name="_method" value="DELETE">

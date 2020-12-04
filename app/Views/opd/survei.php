@@ -83,7 +83,7 @@
                                         <td><?= $item->start; ?></td>
                                         <td><?= $item->end; ?></td>
                                         <td>
-                                            <a href="/Opd/survei/update/<?= $item->id; ?>" class="btn btn-sm btn-warning">Edit</a>
+                                            <a href="/opd/survei/update/<?= $item->id; ?>" class="btn btn-sm btn-warning">Edit</a>
                                             <form action="/Opd/survei/<?= $item->id ?>" class="d-inline" method="POST">
                                                 <?= csrf_field(); ?>
                                                 <input type="hidden" name="_method" value="DELETE">

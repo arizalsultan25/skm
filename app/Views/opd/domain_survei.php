@@ -71,7 +71,7 @@
                                         <td><?= $item->domain ?></td>
                                         <td><?= $item->nama_layanan ?></td>
                                         <td>
-                                            <a href="/Opd/domainsurvei/update/<?= $item->id; ?>" class="btn btn-sm btn-warning">Edit</a>
+                                            <a href="/opd/domainsurvei/update/<?= $item->id; ?>" class="btn btn-sm btn-warning">Edit</a>
                                             <form action="/Opd/domainsurvei/<?= $item->id ?>" class="d-inline" method="POST">
                                                 <?= csrf_field(); ?>
                                                 <input type="hidden" name="_method" value="DELETE">

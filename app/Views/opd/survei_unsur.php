@@ -73,7 +73,7 @@
                                         <td><?= $item->nama_referensi ?></td>
                                         <td><?= $item->nama_survei ?></td>
                                         <td>
-                                            <a href="/Opd/unsur-survei/update/<?= $item->id ?>" class="btn btn-sm btn-warning">Edit</a>
+                                            <a href="/opd/unsur-survei/update/<?= $item->id ?>" class="btn btn-sm btn-warning">Edit</a>
                                             <form action="/Opd/unsur-survei/<?= $item->id ?>" class="d-inline" method="POST">
                                                 <?= csrf_field(); ?>
                                                 <input type="hidden" name="_method" value="DELETE">

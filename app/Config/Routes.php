@@ -90,7 +90,7 @@ $routes->group('admin', function ($routes) {
 	$routes->delete('unsur-survei/(:num)', 'Admin\SurveiUnsur::delete/$1');
 });
 
-
+$routes->add('opd', 'Opd\Layanan::index');
 $routes->group('opd', function ($routes) {
 
 	$routes->add('layanan', 'Opd\Layanan::index');

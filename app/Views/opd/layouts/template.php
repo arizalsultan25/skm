@@ -117,7 +117,7 @@
                         </li>
                         <li class="nav-header">OPERASIONAL</li>
                         <li class="nav-item">
-                            <a href="<?= base_url('Opd/layanan') ?>" class="nav-link">
+                            <a href="<?= base_url('opd/layanan') ?>" class="nav-link">
                                 <i class="nav-icon fas fa-tachometer-alt"></i>
                                 <p>
                                     Layanan
@@ -125,7 +125,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="<?= base_url('Opd/domainsurvei/') ?>" class="nav-link">
+                            <a href="<?= base_url('opd/domainsurvei/') ?>" class="nav-link">
                                 <i class="nav-icon fas fa-tachometer-alt"></i>
                                 <p>
                                     Domain Survei
@@ -133,7 +133,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="<?= base_url('Opd/referensiunsur/') ?>" class="nav-link">
+                            <a href="<?= base_url('opd/referensiunsur/') ?>" class="nav-link">
                                 <i class="nav-icon fas fa-tachometer-alt"></i>
                                 <p>
                                     Referensi Unsur
@@ -141,7 +141,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="<?= base_url('Opd/pertanyaan/') ?>" class="nav-link">
+                            <a href="<?= base_url('opd/pertanyaan/') ?>" class="nav-link">
                                 <i class="nav-icon fas fa-tachometer-alt"></i>
                                 <p>
                                     Pertanyaan
@@ -149,7 +149,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="<?= base_url('Opd/jawaban/') ?>" class="nav-link">
+                            <a href="<?= base_url('opd/jawaban/') ?>" class="nav-link">
                                 <i class="nav-icon fas fa-tachometer-alt"></i>
                                 <p>
                                     Jawaban
@@ -157,7 +157,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="<?= base_url('Opd/survei/') ?>" class="nav-link">
+                            <a href="<?= base_url('opd/survei/') ?>" class="nav-link">
                                 <i class="nav-icon fas fa-tachometer-alt"></i>
                                 <p>
                                     Survei
@@ -165,7 +165,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="<?= base_url('Opd/surveiunsur/') ?>" class="nav-link">
+                            <a href="<?= base_url('opd/surveiunsur/') ?>" class="nav-link">
                                 <i class="nav-icon fas fa-tachometer-alt"></i>
                                 <p>
                                     Unsur Survei

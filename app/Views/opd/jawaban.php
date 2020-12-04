@@ -81,7 +81,7 @@
                                         <td><?= $item->jawaban ?></td>
                                         <td><?= $item->nilai ?></td>
                                         <td>
-                                            <a href="/Opd/jawaban/update/<?= $item->id ?>" class="btn btn-sm btn-warning">Edit</a>
+                                            <a href="/opd/jawaban/update/<?= $item->id ?>" class="btn btn-sm btn-warning">Edit</a>
                                             <form action="/Opd/jawaban/<?= $item->id ?>" class="d-inline" method="POST">
                                                 <?= csrf_field(); ?>
                                                 <input type="hidden" name="_method" value="DELETE">
