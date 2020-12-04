@@ -23,7 +23,7 @@ class Survei extends BaseController
             'validation' => \Config\Services::validation()
         ];
 
-        return view('Opd/survei', $data);
+        return view('opd/survei', $data);
     }
 
     public function create()
@@ -36,7 +36,7 @@ class Survei extends BaseController
                 'end' => 'required',
             ]
         )) {
-            return redirect()->to('/Opd/survei')->withInput();
+            return redirect()->to('/opd/survei')->withInput();
         }
         $this->surveiModel->save([
             'layanan_id' => $this->request->getVar('layanan_id'),
@@ -45,7 +45,7 @@ class Survei extends BaseController
             'end' => $this->request->getVar('end')
         ]);
         session()->setFlashdata('pesan', 'Survei berhasil ditambahkan');
-        return redirect()->to('/Opd/survei');
+        return redirect()->to('/opd/survei');
     }
 
     public function update($id)
@@ -58,7 +58,7 @@ class Survei extends BaseController
                 'surveiId' => $this->surveiModel->getIdSurvei($id),
                 'validation' => \Config\Services::validation()
             ];
-            return view('Opd/surveiUpdate', $data);
+            return view('opd/surveiUpdate', $data);
         } else {
             if (!$this->validate(
                 [
@@ -68,7 +68,7 @@ class Survei extends BaseController
                     'end' => "required",
                 ]
             )) {
-                return redirect()->to('/Opd/surveiUpdate/' . $id)->withInput();
+                return redirect()->to('/opd/surveiUpdate/' . $id)->withInput();
             }
             $this->surveiModel->save([
                 'id' => $this->request->getVar('survei_id'),
@@ -78,7 +78,7 @@ class Survei extends BaseController
                 'end' => $this->request->getVar('end')
             ]);
             session()->setFlashdata('pesan', 'Survei berhasil diubah');
-            return redirect()->to('/Opd/survei');
+            return redirect()->to('/opd/survei');
         }
     }
 
@@ -86,7 +86,7 @@ class Survei extends BaseController
     {
         $this->surveiModel->delete($id);
         session()->setFlashdata('pesan', 'Survei berhasil dihapus!');
-        return redirect()->to('/Opd/survei');
+        return redirect()->to('/opd/survei');
     }
 
     //--------------------------------------------------------------------

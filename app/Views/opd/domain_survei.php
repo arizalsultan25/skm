@@ -20,7 +20,7 @@
                     <div class="card-header bg-primary">
                         Tambah Domain Survei
                     </div>
-                    <form action="/Opd/domainsurvei/create" method="POST">
+                    <form action="/opd/domainsurvei/create" method="POST">
                         <?= csrf_field(); ?>
                         <div class="card-body">
                             <div class="form-group">
@@ -72,7 +72,7 @@
                                         <td><?= $item->nama_layanan ?></td>
                                         <td>
                                             <a href="/opd/domainsurvei/update/<?= $item->id; ?>" class="btn btn-sm btn-warning">Edit</a>
-                                            <form action="/Opd/domainsurvei/<?= $item->id ?>" class="d-inline" method="POST">
+                                            <form action="/opd/domainsurvei/<?= $item->id ?>" class="d-inline" method="POST">
                                                 <?= csrf_field(); ?>
                                                 <input type="hidden" name="_method" value="DELETE">
                                                 <button type="submit" class="btn btn-sm btn-danger" onclick="return confirm('apakah anda yakin?');">Delete</button>

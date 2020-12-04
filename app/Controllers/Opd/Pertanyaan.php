@@ -22,7 +22,7 @@ class Pertanyaan extends BaseController
             'refUnsur' => $this->RefUnsurModel->getReferensi(),
             'validation' => \Config\Services::validation()
         ];
-        return view('Opd/pertanyaan', $data);
+        return view('opd/pertanyaan', $data);
     }
 
     public function create()
@@ -33,14 +33,14 @@ class Pertanyaan extends BaseController
                 'pertanyaan' => 'required',
             ]
         )) {
-            return redirect()->to('/Opd/pertanyaan')->withInput();
+            return redirect()->to('/opd/pertanyaan')->withInput();
         }
         $this->pertanyaanModel->save([
             'ref_id' => $this->request->getVar('ref_id'),
             'pertanyaan' => $this->request->getVar('pertanyaan')
         ]);
         session()->setFlashdata('pesan', 'Pertanyaan berhasil ditambahkan');
-        return redirect()->to('/Opd/pertanyaan');
+        return redirect()->to('/opd/pertanyaan');
     }
 
     public function update($id)
@@ -52,13 +52,13 @@ class Pertanyaan extends BaseController
                 'refUnsur' => $this->RefUnsurModel->getReferensi(),
                 'validation' => \Config\Services::validation()
             ];
-            return view('Opd/pertanyaanUpdate', $data);
+            return view('opd/pertanyaanUpdate', $data);
         } else {
             if (!$this->validate([
                 'ref_id' => 'required',
                 'pertanyaan' => 'required',
             ])) {
-                return redirect()->to('/Opd/pertanyaan/update/' . $id)->withInput();
+                return redirect()->to('/opd/pertanyaan/update/' . $id)->withInput();
             }
 
             $this->pertanyaanModel->save([
@@ -68,7 +68,7 @@ class Pertanyaan extends BaseController
             ]);
 
             session()->setFlashdata('pesan', 'Pertanyaan berhasil Diubah');
-            return redirect()->to('/Opd/pertanyaan');
+            return redirect()->to('/opd/pertanyaan');
         }
     }
 
@@ -76,7 +76,7 @@ class Pertanyaan extends BaseController
     {
         $this->pertanyaanModel->delete($id);
         session()->setFlashdata('pesan', 'Pertanyaan berhasil dihapus!');
-        return redirect()->to('/Opd/pertanyaan');
+        return redirect()->to('/opd/pertanyaan');
     }
 
     //--------------------------------------------------------------------

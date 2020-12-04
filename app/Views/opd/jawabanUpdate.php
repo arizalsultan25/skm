@@ -17,7 +17,7 @@
         <div class="row">
             <div class="col-12">
                 <div class="card">
-                    <form action="/Opd/jawaban/update/<?= $jawaban->id ?>" method="POST">
+                    <form action="/opd/jawaban/update/<?= $jawaban->id ?>" method="POST">
                         <?= csrf_field(); ?>
                         <input type="hidden" name="id" value="<?= $jawaban->id ?>">
                         <div class="card-header bg-primary">

@@ -20,7 +20,7 @@
                     <div class="card-header bg-primary">
                         Ubah Pertanyaan
                     </div>
-                    <form action="/Opd/pertanyaan/update/<?= $pertanyaan->id ?>" method="POST">
+                    <form action="/opd/pertanyaan/update/<?= $pertanyaan->id ?>" method="POST">
                         <?= csrf_field(); ?>
                         <input type="hidden" name="id" value="<?= $pertanyaan->id ?>">
                         <div class="card-body">

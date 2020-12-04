@@ -20,7 +20,7 @@
                     <div class="card-header bg-warning">
                         Update Survei
                     </div>
-                    <form action="/Opd/survei/update/<?= $surveiId->id ?>" method="POST">
+                    <form action="/opd/survei/update/<?= $surveiId->id ?>" method="POST">
                         <input type="hidden" name="id_survei" value="<?= $surveiId->id ?>">
                         <div class="card-body">
                             <?= csrf_field(); ?>

@@ -25,7 +25,7 @@ class DomainSurvei extends BaseController
             'LayananAll' => $this->LayananModel->getAllLayanan(),
             'validation' => \Config\Services::validation()
         ];
-        return view('Opd/domain_survei', $data);
+        return view('opd/domain_survei', $data);
     }
 
     public function create()
@@ -36,14 +36,14 @@ class DomainSurvei extends BaseController
                 'layanan_id' => 'required'
             ]
         )) {
-            return redirect()->to('/Opd/domainsurvei')->withInput();
+            return redirect()->to('/opd/domainsurvei')->withInput();
         }
         $this->DomainSurvei->save([
             'website_id' => $this->request->getVar('website_id'),
             'layanan_id' => $this->request->getVar('layanan_id')
         ]);
         session()->setFlashdata('pesan', 'Domain Survei berhasil ditambahkan');
-        return redirect()->to('/Opd/domainsurvei');
+        return redirect()->to('/opd/domainsurvei');
     }
 
     public function update($id)
@@ -56,13 +56,13 @@ class DomainSurvei extends BaseController
                 'LayananAll' => $this->LayananModel->getAllLayanan(),
                 'validation' => \Config\Services::validation()
             ];
-            return view('Opd/domain_surveiUpdate', $data);
+            return view('opd/domain_surveiUpdate', $data);
         } else {
             if (!$this->validate([
                 'website_id' => 'required',
                 'layanan_id' => 'required'
             ])) {
-                return redirect()->to('/Opd/domainsurvei/update/' . $id)->withInput();
+                return redirect()->to('/opd/domainsurvei/update/' . $id)->withInput();
             }
 
             $this->DomainSurvei->save([
@@ -72,7 +72,7 @@ class DomainSurvei extends BaseController
             ]);
 
             session()->setFlashdata('pesan', 'Domain Survei berhasil Diubah');
-            return redirect()->to('/Opd/domainsurvei');
+            return redirect()->to('/opd/domainsurvei');
         }
     }
 
@@ -80,7 +80,7 @@ class DomainSurvei extends BaseController
     {
         $this->DomainSurvei->delete($id);
         session()->setFlashdata('pesan', 'Domain Survei berhasil dihapus!');
-        return redirect()->to('/Opd/domainsurvei');
+        return redirect()->to('/opd/domainsurvei');
     }
 
 

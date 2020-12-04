@@ -25,7 +25,7 @@ class SurveiUnsur extends BaseController
             'survei' => $this->SurveiModel->getSurvei(),
             'validation' => \Config\Services::validation()
         ];
-        return view('Opd/survei_unsur', $data);
+        return view('opd/survei_unsur', $data);
     }
 
     public function create()
@@ -36,14 +36,14 @@ class SurveiUnsur extends BaseController
                 'survei_id' => 'required',
             ]
         )) {
-            return redirect()->to('/Opd/unsur-survei')->withInput();
+            return redirect()->to('/opd/unsur-survei')->withInput();
         }
         $this->surveiUnsur->save([
             'ref_id' => $this->request->getVar('ref_id'),
             'survei_id' => $this->request->getVar('survei_id')
         ]);
         session()->setFlashdata('pesan', 'Unsur Survei berhasil ditambahkan');
-        return redirect()->to('/Opd/unsur-survei');
+        return redirect()->to('/opd/unsur-survei');
     }
 
     public function update($id)
@@ -56,13 +56,13 @@ class SurveiUnsur extends BaseController
                 'survei' => $this->SurveiModel->getSurvei(),
                 'validation' => \Config\Services::validation()
             ];
-            return view('Opd/survei_unsurUpdate', $data);
+            return view('opd/survei_unsurUpdate', $data);
         } else {
             if (!$this->validate([
                 'ref_id' => 'required',
                 'survei_id' => 'required',
             ])) {
-                return redirect()->to('/Opd/unsur-survei/update/' . $id)->withInput();
+                return redirect()->to('/opd/unsur-survei/update/' . $id)->withInput();
             }
 
             $this->surveiUnsur->save([
@@ -72,7 +72,7 @@ class SurveiUnsur extends BaseController
             ]);
 
             session()->setFlashdata('pesan', 'Unsur Survei berhasil Diubah');
-            return redirect()->to('/Opd/unsur-survei');
+            return redirect()->to('/opd/unsur-survei');
         }
     }
 
@@ -80,7 +80,7 @@ class SurveiUnsur extends BaseController
     {
         $this->surveiUnsur->delete($id);
         session()->setFlashdata('pesan', 'Unsur Survei berhasil dihapus!');
-        return redirect()->to('/Opd/unsur-survei');
+        return redirect()->to('/opd/unsur-survei');
     }
 
 

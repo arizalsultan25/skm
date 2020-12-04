@@ -27,7 +27,7 @@ class Jawaban extends BaseController
             'validation' => \Config\Services::validation(),
             'pertanyaan' => $this->pertanyaanModel->getAllPertanyaan()
         ];
-        return view('Opd/jawaban', $data);
+        return view('opd/jawaban', $data);
     }
 
     public function create()
@@ -39,7 +39,7 @@ class Jawaban extends BaseController
                 'bobot' => 'required',
             ]
         )) {
-            return redirect()->to('/Opd/jawaban')->withInput();
+            return redirect()->to('/opd/jawaban')->withInput();
         }
         $data = [
             'pertanyaan_id' => $this->request->getVar('ref_id'),
@@ -49,7 +49,7 @@ class Jawaban extends BaseController
 
         $this->jawabanModel->save($data);       
         session()->setFlashdata('pesan', 'Jawaban berhasil ditambahkan');
-        return redirect()->to('/Opd/jawaban');
+        return redirect()->to('/opd/jawaban');
         var_dump($data);
         echo $this->request->getVar('ref_id').' '. $this->request->getVar('jawaban').' '.$this->request->getVar('bobot');
     }
@@ -64,14 +64,14 @@ class Jawaban extends BaseController
                 'pertanyaan' => $this->pertanyaanModel->getAllPertanyaan(),
                 'validation' => \Config\Services::validation()
             ];
-            return view('Opd/jawabanUpdate', $data);
+            return view('opd/jawabanUpdate', $data);
         } else {
             if (!$this->validate([
                 'ref_id' => 'required',
                 'jawaban' => 'required',
                 'nilai' => 'required'
             ])) {
-                return redirect()->to('/Opd/jawaban/update/' . $id)->withInput();
+                return redirect()->to('/opd/jawaban/update/' . $id)->withInput();
             }
 
             $this->jawabanModel->save([
@@ -82,7 +82,7 @@ class Jawaban extends BaseController
             ]);
 
             session()->setFlashdata('pesan', 'Jawaban berhasil Diubah');
-            return redirect()->to('/Opd/jawaban');
+            return redirect()->to('/opd/jawaban');
         }
     }
 
@@ -90,7 +90,7 @@ class Jawaban extends BaseController
     {
         $this->jawabanModel->delete($id);
         session()->setFlashdata('pesan', 'Jawaban berhasil dihapus!');
-        return redirect()->to('/Opd/jawaban');
+        return redirect()->to('/opd/jawaban');
     }
 
 

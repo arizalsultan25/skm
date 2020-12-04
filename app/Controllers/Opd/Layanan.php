@@ -22,7 +22,7 @@ class Layanan extends BaseController
             'layanan' => $this->layananModel->getAllLayanan(),
             'validation' => \Config\Services::validation()
         ];
-        return view('Opd/layanan', $data);
+        return view('opd/layanan', $data);
     }
 
     public function create()
@@ -30,14 +30,14 @@ class Layanan extends BaseController
         if (!$this->validate(
             ['nama' => 'required|is_unique[layanan.nama]']
         )) {
-            return redirect()->to('/Opd/layanan')->withInput();
+            return redirect()->to('/opd/layanan')->withInput();
         }
         $this->layananModel->save([
             'nama' => $this->request->getVar('nama'),
             'unit_id' => $this->request->getVar('unit_id')
         ]);
         session()->setFlashdata('pesan', 'Layanan berhasil ditambahkan');
-        return redirect()->to('/Opd/layanan');
+        return redirect()->to('/opd/layanan');
     }
 
     public function update($id)
@@ -50,13 +50,13 @@ class Layanan extends BaseController
                 'layanan' => $this->layananModel->getIdLayanan($id),
                 'validation' => \Config\Services::validation()
             ];
-            return view('Opd/layananUpdate', $data);
+            return view('opd/layananUpdate', $data);
         } else {
             if (!$this->validate([
                 'nama' => "required|is_unique[layanan.nama,id,{$this->request->getVar('id_layanan')}]",
                 'unit_id' => "required"
             ])) {
-                return redirect()->to('/Opd/layanan/update' . $id)->withInput();
+                return redirect()->to('/opd/layanan/update' . $id)->withInput();
             }
 
             $this->layananModel->save([
@@ -66,7 +66,7 @@ class Layanan extends BaseController
             ]);
 
             session()->setFlashdata('pesan', 'Layanan berhasil Diubah');
-            return redirect()->to('/Opd/layanan');
+            return redirect()->to('/opd/layanan');
         }
     }
 
@@ -74,7 +74,7 @@ class Layanan extends BaseController
     {
         $this->layananModel->delete($id);
         session()->setFlashdata('pesan', 'Layanan berhasil dihapus!');
-        return redirect()->to('/Opd/layanan');
+        return redirect()->to('/opd/layanan');
     }
 
     //--------------------------------------------------------------------
