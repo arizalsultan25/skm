@@ -36,14 +36,14 @@ class SurveiUnsur extends BaseController
                 'survei_id' => 'required',
             ]
         )) {
-            return redirect()->to('/admin/unsur-survei')->withInput();
+            return redirect()->to('/admin/survei_unsur')->withInput();
         }
         $this->surveiUnsur->save([
             'ref_id' => $this->request->getVar('ref_id'),
             'survei_id' => $this->request->getVar('survei_id')
         ]);
         session()->setFlashdata('pesan', 'Unsur Survei berhasil ditambahkan');
-        return redirect()->to('/admin/unsur-survei');
+        return redirect()->to('/admin/survei_unsur');
     }
 
     public function update($id)
@@ -62,7 +62,7 @@ class SurveiUnsur extends BaseController
                 'ref_id' => 'required',
                 'survei_id' => 'required',
             ])) {
-                return redirect()->to('/admin/unsur-survei/update/' . $id)->withInput();
+                return redirect()->to('/admin/survei_unsur/update/' . $id)->withInput();
             }
 
             $this->surveiUnsur->save([
@@ -72,7 +72,7 @@ class SurveiUnsur extends BaseController
             ]);
 
             session()->setFlashdata('pesan', 'Unsur Survei berhasil Diubah');
-            return redirect()->to('/admin/unsur-survei');
+            return redirect()->to('/admin/survei_unsur');
         }
     }
 
@@ -80,7 +80,7 @@ class SurveiUnsur extends BaseController
     {
         $this->surveiUnsur->delete($id);
         session()->setFlashdata('pesan', 'Unsur Survei berhasil dihapus!');
-        return redirect()->to('/admin/unsur-survei');
+        return redirect()->to('/admin/survei_unsur');
     }
 
 
