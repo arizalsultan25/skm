@@ -84,10 +84,10 @@ $routes->group('admin', function ($routes) {
 	$routes->post('jawaban/update/(:num)', 'Admin\Jawaban::update/$1');
 	$routes->delete('jawaban/(:num)', 'Admin\Jawaban::delete/$1');
 
-	$routes->get('unsur-survei', 'Admin\SurveiUnsur::index');
-	$routes->post('unsur-survei/create', 'Admin\SurveiUnsur::create');
-	$routes->add('unsur-survei/update/(:num)', 'Admin\SurveiUnsur::update/$1');
-	$routes->delete('unsur-survei/(:num)', 'Admin\SurveiUnsur::delete/$1');
+	$routes->get('survei_unsur', 'Admin\SurveiUnsur::index');
+	$routes->post('survei_unsur/create', 'Admin\SurveiUnsur::create');
+	$routes->add('survei_unsur/update/(:num)', 'Admin\SurveiUnsur::update/$1');
+	$routes->delete('survei_unsur/(:num)', 'Admin\SurveiUnsur::delete/$1');
 });
 
 $routes->add('opd', 'Opd\Layanan::index');

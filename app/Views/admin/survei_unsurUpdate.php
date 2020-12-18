@@ -10,14 +10,14 @@
             <div class="col-sm-6">
                 <ol class="breadcrumb float-sm-right">
                     <li class="breadcrumb-item"><a href="/testing">Home</a></li>
-                    <li class="breadcrumb-item active">Unsur-Survei</li>
+                    <li class="breadcrumb-item active">Unsur Survei</li>
                 </ol>
             </div>
         </div>
         <div class="row">
             <div class="col-12">
                 <div class="card">
-                    <form action="/admin/unsur-survei/update/<?= $sUnsur->id ?>" method="POST">
+                    <form action="/admin/survei_unsur/update/<?= $sUnsur->id ?>" method="POST">
                         <input type="hidden" name="id" value="<?= $sUnsur->id ?>">
                         <?= csrf_field(); ?>
                         <div class="card-header bg-primary">
