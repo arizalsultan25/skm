@@ -9,14 +9,14 @@ class Website extends BaseController
 {
     public function __construct()
     {
-        $this->websiteModel = new WebsiteModel();
+        $this->WebsiteModel = new WebsiteModel();
     }
 
     public function index()
     {
         $data = [
             'title' => 'Daftar Website | Survei Batam',
-            'website' => $this->websiteModel->getWebsite(),
+            'website' => $this->WebsiteModel->getWebsite(),
             'validation' => \Config\Services::validation()
         ];
 
@@ -32,7 +32,7 @@ class Website extends BaseController
             // return redirect()->to('/admin/website')->withInput()->with('validation', $validation);
             return redirect()->to('/admin/website')->withInput();
         }
-        $this->websiteModel->save([
+        $this->WebsiteModel->save([
             'domain' => $this->request->getVar('domain')
         ]);
         session()->setFlashdata('pesan', 'Domain berhasil ditambahkan');
@@ -44,8 +44,8 @@ class Website extends BaseController
         if (!isset($_POST['update'])) {
             $data = [
                 'title' => 'Daftar Website | Survei Batam',
-                'website' => $this->websiteModel->getWebsite(),
-                'web' => $this->websiteModel->getWebsite($id),
+                'website' => $this->WebsiteModel->getWebsite(),
+                'websiteId' => $this->WebsiteModel->getWebsite($id),
                 'validation' => \Config\Services::validation()
             ];
             return view('admin/websiteUpdate', $data);
@@ -56,7 +56,7 @@ class Website extends BaseController
                 return redirect()->to('/admin/website/update' . $id)->withInput();
             }
 
-            $this->websiteModel->save([
+            $this->WebsiteModel->save([
                 'id' => $this->request->getVar('website_id'),
                 'domain' => $this->request->getVar('domain')
             ]);
@@ -68,7 +68,7 @@ class Website extends BaseController
 
     public function delete($id)
     {
-        $this->websiteModel->delete($id);
+        $this->WebsiteModel->delete($id);
         session()->setFlashdata('pesan', 'Website berhasil dihapus!');
         return redirect()->to('/admin/website');
     }

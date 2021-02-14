@@ -10,7 +10,7 @@
             </div>
             <div class="col-sm-6">
                 <ol class="breadcrumb float-sm-right">
-                    <li class="breadcrumb-item"><a href="/testing">Home</a></li>
+                    <li class="breadcrumb-item"><a href="/testingg">Home</a></li>
                     <li class="breadcrumb-item active">Pertanyaan</li>
                 </ol>
             </div>
@@ -26,9 +26,9 @@
                         <div class="card-body">
                             <div class="form-group">
                                 <label>Referensi Unsur</label>
-                                <select name="ref_id" class="custom-select">
+                                <select name="referensiunsur_id" class="custom-select">
                                     <option selected>Pilih Referensi Unsur</option>
-                                    <?php foreach ($refUnsur as $item) : ?>
+                                    <?php foreach ($referensiunsur as $item) : ?>
                                         <option value="<?= $item->id ?>"><?= $item->nama ?></option>
                                     <?php endforeach; ?>
                                 </select>

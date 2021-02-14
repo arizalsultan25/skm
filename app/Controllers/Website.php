@@ -8,14 +8,14 @@ class Website extends BaseController
 {
     public function __construct()
     {
-        $this->webisteModel = new WebsiteModel();
+        $this->WebsiteModel = new WebsiteModel();
     }
 
     public function index()
     {
         $data = [
             'title' => 'Website',
-            'website' => $this->webisteModel->getWebsite()
+            'website' => $this->WebsiteModel->getWebsite()
         ];
         return view('website', $data);
     }

@@ -4,22 +4,22 @@ namespace App\Controllers\Opd;
 
 use App\Controllers\BaseController;
 use App\Models\PertanyaanModel;
-use App\Models\ReferensiUnsurModel;
+use App\Models\ReferensiunsurModel;
 
 class Pertanyaan extends BaseController
 {
     public function __construct()
     {
-        $this->pertanyaanModel = new PertanyaanModel();
-        $this->RefUnsurModel = new ReferensiUnsurModel();
+        $this->PertanyaanModel = new PertanyaanModel();
+        $this->ReferensiunsurModel = new ReferensiunsurModel();
     }
 
     public function index()
     {
         $data = [
             'title' => 'Daftar Pertanyaan | Survei Batam',
-            'pertanyaan' => $this->pertanyaanModel->get(),
-            'refUnsur' => $this->RefUnsurModel->getReferensi(),
+            'pertanyaan' => $this->PertanyaanModel->get(),
+            'referensiunsur' => $this->ReferensiunsurModel->getReferensiunsur(),
             'validation' => \Config\Services::validation()
         ];
         return view('opd/pertanyaan', $data);
@@ -29,14 +29,14 @@ class Pertanyaan extends BaseController
     {
         if (!$this->validate(
             [
-                'ref_id' => 'required',
+                'referensiunsur_id' => 'required',
                 'pertanyaan' => 'required',
             ]
         )) {
             return redirect()->to('/opd/pertanyaan')->withInput();
         }
-        $this->pertanyaanModel->save([
-            'ref_id' => $this->request->getVar('ref_id'),
+        $this->PertanyaanModel->save([
+            'referensiunsur_id' => $this->request->getVar('referensiunsur_id'),
             'pertanyaan' => $this->request->getVar('pertanyaan')
         ]);
         session()->setFlashdata('pesan', 'Pertanyaan berhasil ditambahkan');
@@ -48,22 +48,22 @@ class Pertanyaan extends BaseController
         if (!isset($_POST['update'])) {
             $data = [
                 'title' => 'Daftar Pertanyaan | Survei Batam',
-                'pertanyaan' => $this->pertanyaanModel->get($id),
-                'refUnsur' => $this->RefUnsurModel->getReferensi(),
+                'pertanyaan' => $this->PertanyaanModel->get($id),
+                'referensiunsur' => $this->ReferensiunsurModel->getReferensiunsur(),
                 'validation' => \Config\Services::validation()
             ];
             return view('opd/pertanyaanUpdate', $data);
         } else {
             if (!$this->validate([
-                'ref_id' => 'required',
+                'referensiunsur_id' => 'required',
                 'pertanyaan' => 'required',
             ])) {
                 return redirect()->to('/opd/pertanyaan/update/' . $id)->withInput();
             }
 
-            $this->pertanyaanModel->save([
+            $this->PertanyaanModel->save([
                 'id' => $this->request->getVar('id'),
-                'ref_id' => $this->request->getVar('ref_id'),
+                'referensiunsur_id' => $this->request->getVar('referensiunsur_id'),
                 'pertanyaan' => $this->request->getVar('pertanyaan')
             ]);
 
@@ -74,7 +74,7 @@ class Pertanyaan extends BaseController
 
     public function delete($id)
     {
-        $this->pertanyaanModel->delete($id);
+        $this->PertanyaanModel->delete($id);
         session()->setFlashdata('pesan', 'Pertanyaan berhasil dihapus!');
         return redirect()->to('/opd/pertanyaan');
     }

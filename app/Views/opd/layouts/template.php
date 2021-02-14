@@ -37,7 +37,7 @@
     <!-- Site wrapper -->
     <div class="wrapper">
         <!-- Navbar -->
-        <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+        <nav class="main-header navbar navbar-expand navbar-dark navbar-gray-dark">
             <!-- Left navbar links -->
             <ul class="navbar-nav">
                 <li class="nav-item">
@@ -48,6 +48,7 @@
                 </li>
                 <li class="nav-item d-none d-sm-inline-block">
                     <a href="#" class="nav-link">Contact</a>
+                    
                 </li>
             </ul>
 
@@ -71,7 +72,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="<?= base_url() ?>" class="nav-link" onclick="return confirm('apakah anda yakin ingin keluar?');">
+                    <a href="<?= base_url('/home/loginopd') ?>" class="nav-link" onclick="return confirm('apakah anda yakin ingin keluar?');">
                         <p>
                         Logout
                         </p>
@@ -97,7 +98,7 @@
                         <img src="<?= base_url('assets/admin-lte') ?>/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
                     </div>
                     <div class="info">
-                        <a href="#" class="d-block">Admin OPD</a>
+                        <a href="#" class="d-block"><?= session()->get('nama') ?></a>
                     </div>
                 </div>
 

@@ -4,7 +4,7 @@ namespace App\Models;
 use CodeIgniter\Model;
 
 class Survei extends Model{
-    protected $table = "Survei";
+    protected $table = "survei";
 
     // fungsi ambil seluruh data / data spesifik dengan id tertentu
     public function getAllData($id = false){
@@ -14,7 +14,7 @@ class Survei extends Model{
                         ->getResultArray();
         } else {
             return $this->table('survei')
-                        ->where('id_survei', $id)
+                        ->where('survei_id', $id)
                         ->get()
                         ->getRowArray();
         }
@@ -23,7 +23,7 @@ class Survei extends Model{
     // fungsi delete data
     public function deleteById($id){
         return $this->table('survei')
-                    ->where('id_survei', $id)
+                    ->where('survei_id', $id)
                     ->delete();
     }
 
@@ -39,6 +39,6 @@ class Survei extends Model{
     // fungsi update
     public function updateWhereID($data, $id){
         return $this->table('survei')
-                    ->update($data, ['id_survei' => $id]);
+                    ->update($data, ['survei_id' => $id]);
     }
 }

@@ -19,7 +19,7 @@ class Testing extends BaseController
     }
     public function unit_layanan()
     {
-        return view('admin/unit_layanan');
+        return view('admin/unitlayanan');
     }
     public function layanan()
     {
@@ -31,11 +31,11 @@ class Testing extends BaseController
     }
     public function unsur_survei()
     {
-        return view('admin/unsur_survei');
+        return view('admin/unsursurvei');
     }
     public function ref_unsur()
     {
-        return view('admin/ref_unsur');
+        return view('admin/referensiunsur');
     }
     public function pertanyaan()
     {

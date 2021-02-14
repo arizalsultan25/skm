@@ -3,16 +3,16 @@
 namespace App\Controllers\Opd;
 
 use App\Controllers\BaseController;
-use App\Models\DomainSurveiModel;
+use App\Models\DomainsurveiModel;
 use App\Models\WebsiteModel;
 use App\Models\LayananModel;
 
-class DomainSurvei extends BaseController
+class Domainsurvei extends BaseController
 {
     public function __construct()
     {
-        $this->DomainSurvei = new DomainSurveiModel();
-        $this->webisteModel = new WebsiteModel();
+        $this->Domainsurvei = new DomainsurveiModel();
+        $this->WebsiteModel = new WebsiteModel();
         $this->LayananModel = new LayananModel();
     }
 
@@ -20,12 +20,12 @@ class DomainSurvei extends BaseController
     {
         $data = [
             'title' => 'Domain Survei | Survei Batam',
-            'DomainSurvei' => $this->DomainSurvei->getAllDomainSurvei(),
-            'WebsiteAll' => $this->webisteModel->getWebsite(),
-            'LayananAll' => $this->LayananModel->getAllLayanan(),
+            'Domainsurvei' => $this->Domainsurvei->getAllDomainsurvei(),
+            'websiteAll' => $this->WebsiteModel->getWebsite(),
+            'layananAll' => $this->LayananModel->getAllLayanan(),
             'validation' => \Config\Services::validation()
         ];
-        return view('opd/domain_survei', $data);
+        return view('opd/domainsurvei', $data);
     }
 
     public function create()
@@ -38,7 +38,7 @@ class DomainSurvei extends BaseController
         )) {
             return redirect()->to('/opd/domainsurvei')->withInput();
         }
-        $this->DomainSurvei->save([
+        $this->Domainsurvei->save([
             'website_id' => $this->request->getVar('website_id'),
             'layanan_id' => $this->request->getVar('layanan_id')
         ]);
@@ -51,12 +51,12 @@ class DomainSurvei extends BaseController
         if (!isset($_POST['update'])) {
             $data = [
                 'title' => 'Daftar Domain Survei | Survei Batam',
-                'domainsurvei' => $this->DomainSurvei->getIdDomainSurvei($id),
-                'WebsiteAll' => $this->webisteModel->getWebsite(),
-                'LayananAll' => $this->LayananModel->getAllLayanan(),
+                'domainsurvei' => $this->DomainsurveiModel->getIdDomainsurvei($id),
+                'websiteAll' => $this->WebsiteModel->getWebsite(),
+                'layananAll' => $this->LayananModel->getAllLayanan(),
                 'validation' => \Config\Services::validation()
             ];
-            return view('opd/domain_surveiUpdate', $data);
+            return view('opd/domainsurveiUpdate', $data);
         } else {
             if (!$this->validate([
                 'website_id' => 'required',
@@ -65,8 +65,8 @@ class DomainSurvei extends BaseController
                 return redirect()->to('/opd/domainsurvei/update/' . $id)->withInput();
             }
 
-            $this->DomainSurvei->save([
-                'id' => $this->request->getVar('id_domainsurvei'),
+            $this->Domainsurvei->save([
+                'id' => $this->request->getVar('domainsurvei_id'),
                 'website_id' => $this->request->getVar('website_id'),
                 'layanan_id' => $this->request->getVar('layanan_id')
             ]);
@@ -78,7 +78,7 @@ class DomainSurvei extends BaseController
 
     public function delete($id)
     {
-        $this->DomainSurvei->delete($id);
+        $this->Domainsurvei->delete($id);
         session()->setFlashdata('pesan', 'Domain Survei berhasil dihapus!');
         return redirect()->to('/opd/domainsurvei');
     }

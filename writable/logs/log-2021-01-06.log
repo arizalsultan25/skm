@@ -1,0 +1,50 @@
+CRITICAL - 2021-01-06 06:32:22 --> Invalid file: admin/surveiunsur.php
+#0 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\View\View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/surveiuns...')
+#1 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\Common.php(1119): CodeIgniter\View\View->render('admin/surveiuns...', Array, true)
+#2 C:\xampp\htdocs\skm2020\app\Controllers\Admin\SurveiUnsur.php(28): view('admin/surveiuns...', Array)
+#3 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\Admin\SurveiUnsur->index()
+#4 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SurveiUnsur))
+#5 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\skm2020\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2021-01-06 06:33:48 --> Invalid file: admin/surveiunsur.php
+#0 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\View\View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/surveiuns...')
+#1 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\Common.php(1119): CodeIgniter\View\View->render('admin/surveiuns...', Array, true)
+#2 C:\xampp\htdocs\skm2020\app\Controllers\Admin\SurveiUnsur.php(28): view('admin/surveiuns...', Array)
+#3 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\Admin\SurveiUnsur->index()
+#4 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SurveiUnsur))
+#5 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\skm2020\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2021-01-06 06:34:47 --> Invalid file: opd/unsur-survei.php
+#0 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\View\View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('opd/unsur-surve...')
+#1 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\Common.php(1119): CodeIgniter\View\View->render('opd/unsur-surve...', Array, true)
+#2 C:\xampp\htdocs\skm2020\app\Controllers\Opd\SurveiUnsur.php(28): view('opd/unsur-surve...', Array)
+#3 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\Opd\SurveiUnsur->index()
+#4 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Opd\SurveiUnsur))
+#5 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\skm2020\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2021-01-06 06:36:44 --> Invalid file: opd/unsur-survei.php
+#0 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\View\View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('opd/unsur-surve...')
+#1 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\Common.php(1119): CodeIgniter\View\View->render('opd/unsur-surve...', Array, true)
+#2 C:\xampp\htdocs\skm2020\app\Controllers\Opd\SurveiUnsur.php(28): view('opd/unsur-surve...', Array)
+#3 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\Opd\SurveiUnsur->index()
+#4 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Opd\SurveiUnsur))
+#5 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\skm2020\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2021-01-06 06:37:04 --> Invalid file: admin/surveiunsur.php
+#0 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\View\View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/surveiuns...')
+#1 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\Common.php(1119): CodeIgniter\View\View->render('admin/surveiuns...', Array, true)
+#2 C:\xampp\htdocs\skm2020\app\Controllers\Admin\SurveiUnsur.php(28): view('admin/surveiuns...', Array)
+#3 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\Admin\SurveiUnsur->index()
+#4 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SurveiUnsur))
+#5 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\skm2020\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#8 {main}

@@ -4,9 +4,9 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class UnitLayananModel extends Model
+class UnitlayananModel extends Model
 {
-    protected $table = 'unit-layanan';
+    protected $table = 'unitlayanan';
     protected $allowedFields = ['nama'];
 
     public function __construct()
@@ -14,9 +14,9 @@ class UnitLayananModel extends Model
         $this->db = \Config\Database::connect();
     }
 
-    public function getUnitLayanan($id = FALSE)
+    public function getUnitlayanan($id = FALSE)
     {
-        $builder = $this->db->table('unit-layanan');
+        $builder = $this->db->table('unitlayanan');
         // Table Website
         if ($id == FALSE) {
             $builder->orderBy('id', 'DESC');

@@ -3,16 +3,16 @@
 namespace App\Controllers\Admin;
 
 use App\Controllers\BaseController;
-use App\Models\SurveiUnsurModel;
-use App\Models\ReferensiUnsurModel;
+use App\Models\SurveiunsurModel;
+use App\Models\ReferensiunsurModel;
 use App\Models\SurveiModel;
 
-class SurveiUnsur extends BaseController
+class Surveiunsur extends BaseController
 {
     public function __construct()
     {
-        $this->surveiUnsur = new SurveiUnsurModel();
-        $this->refUnsurModel = new ReferensiUnsurModel();
+        $this->SurveiunsurModel = new SurveiunsurModel();
+        $this->ReferensiunsurModel = new ReferensiunsurModel();
         $this->SurveiModel = new SurveiModel();
     }
 
@@ -20,30 +20,30 @@ class SurveiUnsur extends BaseController
     {
         $data = [
             'title' => 'Daftar Unsur Survei | Survei Batam',
-            'sUnsur' => $this->surveiUnsur->get(),
-            'refUnsur' => $this->refUnsurModel->getReferensi(),
+            'surveiunsur' => $this->SurveiunsurModel->get(),
+            'referensiunsur' => $this->ReferensiunsurModel->getReferensiunsur(),
             'survei' => $this->SurveiModel->getSurvei(),
             'validation' => \Config\Services::validation()
         ];
-        return view('admin/survei_unsur', $data);
+        return view('admin/surveiunsur', $data);
     }
 
     public function create()
     {
         if (!$this->validate(
             [
-                'ref_id' => 'required',
+                'referensiunsur_id' => 'required',
                 'survei_id' => 'required',
             ]
         )) {
-            return redirect()->to('/admin/survei_unsur')->withInput();
+            return redirect()->to('/admin/surveiunsur')->withInput();
         }
-        $this->surveiUnsur->save([
-            'ref_id' => $this->request->getVar('ref_id'),
+        $this->SurveiunsurModel->save([
+            'referensiunsur_id' => $this->request->getVar('referensiunsur_id'),
             'survei_id' => $this->request->getVar('survei_id')
         ]);
         session()->setFlashdata('pesan', 'Unsur Survei berhasil ditambahkan');
-        return redirect()->to('/admin/survei_unsur');
+        return redirect()->to('/admin/surveiunsur');
     }
 
     public function update($id)
@@ -51,36 +51,36 @@ class SurveiUnsur extends BaseController
         if (!isset($_POST['update'])) {
             $data = [
                 'title' => 'Daftar Unsur Survei | Survei Batam',
-                'sUnsur' => $this->surveiUnsur->get($id),
-                'refUnsur' => $this->refUnsurModel->getReferensi(),
+                'surveiunsur' => $this->SurveiunsurModel->get($id),
+                'referensiunsur' => $this->ReferensiunsurModel->getReferensiunsur(),
                 'survei' => $this->SurveiModel->getSurvei(),
                 'validation' => \Config\Services::validation()
             ];
-            return view('admin/survei_unsurUpdate', $data);
+            return view('admin/surveiunsurUpdate', $data);
         } else {
             if (!$this->validate([
-                'ref_id' => 'required',
+                'referensiunsur_id' => 'required',
                 'survei_id' => 'required',
             ])) {
-                return redirect()->to('/admin/survei_unsur/update/' . $id)->withInput();
+                return redirect()->to('/admin/surveiunsur/update/' . $id)->withInput();
             }
 
-            $this->surveiUnsur->save([
+            $this->SurveiunsurModel->save([
                 'id' => $this->request->getVar('id'),
-                'ref_id' => $this->request->getVar('ref_id'),
+                'referensiunsur_id' => $this->request->getVar('referensiunsur_id'),
                 'survei_id' => $this->request->getVar('survei_id')
             ]);
 
             session()->setFlashdata('pesan', 'Unsur Survei berhasil Diubah');
-            return redirect()->to('/admin/survei_unsur');
+            return redirect()->to('/admin/surveiunsur');
         }
     }
 
     public function delete($id)
     {
-        $this->surveiUnsur->delete($id);
+        $this->SurveiunsurModel->delete($id);
         session()->setFlashdata('pesan', 'Unsur Survei berhasil dihapus!');
-        return redirect()->to('/admin/survei_unsur');
+        return redirect()->to('/admin/surveiunsur');
     }
 
 

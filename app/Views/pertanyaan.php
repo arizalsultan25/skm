@@ -10,8 +10,8 @@ Pertanyaan
         <?php foreach ($pertanyaan as $item) : ?>
             <li><?= $item->pertanyaan; ?></li>
             <?php foreach ($jawaban as $item2) : ?>
-                <?php if ($item->ref_pertanyaan == $item2->ref_jawaban) { ?>
-                    <input type="radio" name="jawaban<?= $item->id_pertanyaan; ?>"><?= $item2->jawaban; ?><br />
+                <?php if ($item->referensiunsur_pertanyaan == $item2->referensiunsur_jawaban) { ?>
+                    <input type="radio" name="jawaban<?= $item->pertanyaan_id; ?>"><?= $item2->jawaban; ?><br />
                 <?php } ?>
             <?php endforeach; ?>
         <?php endforeach; ?>

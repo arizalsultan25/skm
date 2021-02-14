@@ -1,5 +1,15 @@
 <?php
 
+
+
+
+
+
+
+
+
+
+
 namespace Composer;
 
 use Composer\Semver\VersionParser;
@@ -19,7 +29,7 @@ private static $installed = array (
     'aliases' => 
     array (
     ),
-    'reference' => '788f71a454d9a4ffde986e7bb97d535e4a748861',
+    'reference' => '3a44ae1e92218615617074697dd90a103bb841f9',
     'name' => 'codeigniter4/appstarter',
   ),
   'versions' => 
@@ -31,7 +41,7 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
-      'reference' => '788f71a454d9a4ffde986e7bb97d535e4a748861',
+      'reference' => '3a44ae1e92218615617074697dd90a103bb841f9',
     ),
     'codeigniter4/framework' => 
     array (

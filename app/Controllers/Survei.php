@@ -3,20 +3,39 @@
 namespace App\Controllers;
 
 use App\Models\SurveiModel;
+use App\Models\Pertanyaan;
 
 class Survei extends BaseController
 {
     public function __construct()
     {
-        $this->surveiModel = new SurveiModel();
+        $this->SurveiModel = new SurveiModel();
+        $this->Pertanyaan = new Pertanyaan();
     }
 
-    public function index($id)
+    public function index($opd = false, $slug = false)
     {
-        $data = [
-            'title' => 'Daftar Survei',
-            'survei' => $this->surveiModel->getSurveiByIdLayanan($id)
-        ];
-        return view('survei', $data);
+        
+        if ($opd === false && $slug === false) {
+            $data = [
+                'title' => 'Daftar Survei tidak ada opd',
+                'survei' => $this->SurveiModel->getActiveSurvei(),
+            ];
+            return view('survei', $data);
+        } else if ($opd != false && $slug == false) {
+            $data = [
+                'title' => 'opd ada',
+                'survei' => $this->SurveiModel->getSurveiByOpd($opd),
+            ];
+            return view('survei', $data);
+        } else {
+            $raw = $this->SurveiModel->getSurveiBySlug($slug);
+
+            $data = [
+                'title' => 'Daftar Survei ada opd & survei',
+                'survei' => $raw,
+            ];
+            return view('survei', $data);
+        }
     }
 }

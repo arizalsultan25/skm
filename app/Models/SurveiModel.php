@@ -29,10 +29,33 @@ class SurveiModel extends Model
         return $builder->get()->getResult();
     }
 
+    public function getActiveSurvei()
+    {
+        $builder = $this->db->table('survei');
+        $where = "start < (SELECT CURRENT_TIMESTAMP()) AND end > (SELECT CURRENT_TIMESTAMP())";
+        $builder->where($where);
+        return $builder->get()->getResult();
+    }
+
     public function getSurveiByIdLayanan($id)
     {
         $builder = $this->db->table('survei');
         $builder->where('layanan_id', $id);
+        return $builder->get()->getResult();
+    }
+
+    public function getSurveiByOpd($opd)
+    {
+        $builder = $this->db->table('survei');
+        $where = "start < (SELECT CURRENT_TIMESTAMP()) AND end > (SELECT CURRENT_TIMESTAMP()) AND opd = '$opd'";
+        $builder->where($where);
+        return $builder->get()->getResult();
+    }
+
+    public function getSurveiBySlug($slug)
+    {
+        $builder = $this->db->table('survei');
+        $builder->where('slug', $slug);
         return $builder->get()->getResult();
     }
 }

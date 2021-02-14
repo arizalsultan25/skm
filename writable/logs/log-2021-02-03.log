@@ -1,0 +1,7 @@
+CRITICAL - 2021-02-03 21:05:33 --> Class 'App\Models\AkunopdModel' not found
+#0 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(890): App\Controllers\Admin\Akunopd->__construct()
+#1 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->createController()
+#2 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\skm2020\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#5 {main}

@@ -24,14 +24,25 @@
                         <?= csrf_field(); ?>
                         <div class="card-body">
                             <div class="form-group">
+                                <label>Survei</label>
+                                <select name="survei_id" class="custom-select">
+                                    <option selected>Pilih Survei</option>
+                                    <?php foreach ($survei as $item) : ?>
+                                        <option value="<?= $item['id'] ?>"><?= $item['nama'] ?></option>
+                                    <?php endforeach; ?>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
                                 <label>Referensi Unsur</label>
-                                <select name="ref_id" class="custom-select">
+                                <select name="referensiunsur_id" class="custom-select">
                                     <option selected>Pilih Referensi Unsur</option>
-                                    <?php foreach ($refUnsur as $item) : ?>
+                                    <?php foreach ($referensiunsur as $item) : ?>
                                         <option value="<?= $item->id ?>"><?= $item->nama ?></option>
                                     <?php endforeach; ?>
                                 </select>
                             </div>
+
                             <div class="form-group">
                                 <label>Pertanyaan</label>
                                 <input type="text" class="form-control" name="pertanyaan" placeholder="Tulis Pertanyaan">

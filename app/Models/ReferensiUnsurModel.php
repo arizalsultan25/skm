@@ -4,9 +4,9 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class ReferensiUnsurModel extends Model
+class ReferensiunsurModel extends Model
 {
-    protected $table = 'ref-unsur';
+    protected $table = 'referensiunsur';
     protected $allowedFields = ['nama'];
 
     public function __construct()
@@ -14,9 +14,9 @@ class ReferensiUnsurModel extends Model
         $this->db = \Config\Database::connect();
     }
 
-    public function getReferensi($id = FALSE)
+    public function getReferensiunsur($id = FALSE)
     {
-        $builder = $this->db->table('ref-unsur');
+        $builder = $this->db->table('referensiunsur');
         if ($id == FALSE) {
             $builder->orderBy('id', 'ASC');
             return $builder->get()->getResult();

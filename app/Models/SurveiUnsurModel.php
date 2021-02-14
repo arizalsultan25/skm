@@ -4,10 +4,10 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class SurveiUnsurModel extends Model
+class SurveiunsurModel extends Model
 {
-    protected $table = 'survei-unsur';
-    protected $allowedFields = ['ref_id', 'survei_id'];
+    protected $table = 'surveiunsur';
+    protected $allowedFields = ['referensiunsur_id', 'survei_id'];
 
     public function __construct()
     {
@@ -16,13 +16,13 @@ class SurveiUnsurModel extends Model
 
     public function get($id = FALSE)
     {
-        $builder = $this->db->table('survei-unsur a');
+        $builder = $this->db->table('surveiunsur a');
         if ($id != FALSE) {
             $builder->where('a.id', $id);
             return $builder->get()->getRow();
         }
-        $builder->select('a.id, b.nama as nama_referensi, c.nama as nama_survei');
-        $builder->join('ref-unsur b', 'b.id = a.ref_id');
+        $builder->select('a.id, b.nama as nama_referensiunsur, c.nama as nama_survei');
+        $builder->join('referensiunsur b', 'b.id = a.referensiunsur_id');
         $builder->join('survei c', 'c.id = a.survei_id');
         $builder->orderBy('a.id', 'DESC');
         return $builder->get()->getResult();

@@ -4,7 +4,7 @@ namespace App\Models;
 use CodeIgniter\Model;
 
 class Website extends Model{
-    protected $table = "Website";
+    protected $table = "website";
 
     // fungsi ambil seluruh data / data spesifik dengan id tertentu
     public function getAllData($id = false){
@@ -14,7 +14,7 @@ class Website extends Model{
                         ->getResultArray();
         } else {
             return $this->table('website')
-                        ->where('id_website', $id)
+                        ->where('website_id', $id)
                         ->get()
                         ->getRowArray();
         }
@@ -23,7 +23,7 @@ class Website extends Model{
     // fungsi delete data
     public function deleteById($id){
         return $this->table('website')
-                    ->where('id_website', $id)
+                    ->where('website_id', $id)
                     ->delete();
     }
 
@@ -39,6 +39,6 @@ class Website extends Model{
     // fungsi update
     public function updateWhereID($data, $id){
         return $this->table('website')
-                    ->update($data, ['id_website' => $id]);
+                    ->update($data, ['website_id' => $id]);
     }
 }

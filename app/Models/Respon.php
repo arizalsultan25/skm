@@ -4,7 +4,7 @@ namespace App\Models;
 use CodeIgniter\Model;
 
 class Respon extends Model{
-    protected $table = "Respon";
+    protected $table = "respon";
 
     // fungsi ambil seluruh data / data spesifik dengan id tertentu
     public function getAllData($id = false){
@@ -14,7 +14,7 @@ class Respon extends Model{
                         ->getResultArray();
         } else {
             return $this->table('respon')
-                        ->where('id_respon', $id)
+                        ->where('respon_id', $id)
                         ->get()
                         ->getRowArray();
         }
@@ -23,7 +23,7 @@ class Respon extends Model{
     // fungsi delete data
     public function deleteById($id){
         return $this->table('respon')
-                    ->where('id_respon', $id)
+                    ->where('respon_id', $id)
                     ->delete();
     }
 
@@ -39,6 +39,6 @@ class Respon extends Model{
     // fungsi update
     public function updateWhereID($data, $id){
         return $this->table('respon')
-                    ->update($data, ['id_respon' => $id]);
+                    ->update($data, ['respon_id' => $id]);
     }
 }

@@ -22,7 +22,7 @@
                     </div>
                     <form action="/admin/layanan/update/<?php echo $layanan->id; ?>" method="POST">
                         <?= csrf_field(); ?>
-                        <input type="hidden" name="id_layanan" value="<?php echo $layanan->id; ?>">
+                        <input type="hidden" name="layanan_id" value="<?php echo $layanan->id; ?>">
                         <div class="card-body">
                             <div class="form-group">
                                 <label>Nama Layanan</label>
@@ -35,14 +35,14 @@
                             </div>
                             <div class="form-group">
                                 <label>Unit Layanan</label>
-                                <select name="unit_id" class="custom-select">
-                                    <?php foreach ($units as $item) : ?>
-                                        <option value="<?= $item->id ?>" <?php echo ($item->id == $layanan->unit_id) ? 'selected' : '' ?>><?= $item->nama; ?></option>
+                                <select name="unitlayanan_id" class="custom-select">
+                                    <?php foreach ($unitlayanan as $item) : ?>
+                                        <option value="<?= $item->id ?>" <?php echo ($item->id == $unitlayanan->unitlayanan_id) ? 'selected' : '' ?>><?= $item->nama; ?></option>
                                     <?php endforeach; ?>
                                 </select>
                                 <div class="invalid-feedback">
-                                    <?php if ($validation->hasError('unit_id')) {
-                                        echo $validation->getError('unit_id');
+                                    <?php if ($validation->hasError('unitlayanan_id')) {
+                                        echo $validation->getError('unitlayanan_id');
                                     } ?>
                                 </div>
                             </div>

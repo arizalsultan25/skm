@@ -19,7 +19,7 @@
             <tr>
                 <td><?= $data['id_opd'] ?></td>
                 <td><?= $data['nama_opd'] ?></td>
-                <td><a href="<?= base_url('home/deleteopd/'.$data['id_opd']) ?>">Delete</a></td>
+                <td><a href="<?= base_url('home/deleteopd/'.$data['opd_id']) ?>">Delete</a></td>
             </tr>
         <?php }
     ?>

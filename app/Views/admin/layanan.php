@@ -32,9 +32,9 @@
                             </div>
                             <div class="form-group">
                                 <label>Unit Layanan</label>
-                                <select name="unit_id" class="custom-select">
+                                <select name="unitlayanan_id" class="custom-select">
                                     <option selected>Pilih Unit Layanan</option>
-                                    <?php foreach ($units as $item) : ?>
+                                    <?php foreach ($unitlayanan as $item) : ?>
                                         <option value="<?= $item->id ?>"><?= $item->nama; ?></option>
                                     <?php endforeach; ?>
                                 </select>
@@ -63,11 +63,11 @@
                             </thead>
                             <tbody>
                                 <?php $no = 1; ?>
-                                <?php foreach ($layanan as $item) : ?>
+                                <?php foreach ($unitlayanan as $item) : ?>
                                     <tr>
                                         <td><?= $no++ ?></td>
                                         <td><?= $item->nama ?></td>
-                                        <td><?= $item->nama_unit ?></td>
+                                        <td><?= $item->nama ?></td>
                                         <td>
                                             <a href="/admin/layanan/update/<?= $item->id; ?>" class="btn btn-sm btn-warning">Edit</a>
                                             <form action="/admin/layanan/<?= $item->id ?>" class="d-inline" method="POST">

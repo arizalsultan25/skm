@@ -10,16 +10,16 @@ class Layanan extends BaseController
 {
     public function __construct()
     {
-        $this->layananModel = new LayananModel();
-        $this->unitLayanan = new UnitLayananModel();
+        $this->LayananModel = new LayananModel();
+        $this->UnitlayananModel = new UnitlayananModel();
     }
 
     public function index()
     {
         $data = [
             'title' => 'Daftar Layanan | Survei Batam',
-            'units' => $this->unitLayanan->getUnitLayanan(),
-            'layanan' => $this->layananModel->getAllLayanan(),
+            'unitlayanan' => $this->UnitlayananModel->getUnitlayanan(),
+            'layananAll' => $this->LayananModel->getAllLayanan(),
             'validation' => \Config\Services::validation()
         ];
         return view('admin/layanan', $data);
@@ -32,9 +32,9 @@ class Layanan extends BaseController
         )) {
             return redirect()->to('/admin/layanan')->withInput();
         }
-        $this->layananModel->save([
+        $this->LayananModel->save([
             'nama' => $this->request->getVar('nama'),
-            'unit_id' => $this->request->getVar('unit_id')
+            'unitlayanan_id' => $this->request->getVar('unitlayanan_id')
         ]);
         session()->setFlashdata('pesan', 'Layanan berhasil ditambahkan');
         return redirect()->to('/admin/layanan');
@@ -45,24 +45,24 @@ class Layanan extends BaseController
         if (!isset($_POST['update'])) {
             $data = [
                 'title' => 'Daftar Layanan | Survei Batam',
-                'units' => $this->unitLayanan->getUnitLayanan(),
-                'layananAll' => $this->layananModel->getAllLayanan(),
-                'layanan' => $this->layananModel->getIdLayanan($id),
+                'unitlayanan' => $this->UnitlayananModel->getUnitlayanan(),
+                'layananAll' => $this->LayananModel->getAllLayanan(),
+                'layananId' => $this->LayananModel->getIdLayanan($id),
                 'validation' => \Config\Services::validation()
             ];
             return view('admin/layananUpdate', $data);
         } else {
             if (!$this->validate([
-                'nama' => "required|is_unique[layanan.nama,id,{$this->request->getVar('id_layanan')}]",
-                'unit_id' => "required"
+                'nama' => "required|is_unique[layanan.nama,id,{$this->request->getVar('layanan_id')}]",
+                'unitlayanan_id' => "required"
             ])) {
                 return redirect()->to('/admin/layanan/update' . $id)->withInput();
             }
 
-            $this->layananModel->save([
-                'id' => $this->request->getVar('id_layanan'),
+            $this->LayananModel->save([
+                'id' => $this->request->getVar('layanan_id'),
                 'nama' => $this->request->getVar('nama'),
-                'unit_id' => $this->request->getVar('unit_id'),
+                'unitlayanan_id' => $this->request->getVar('unitlayanan_id'),
             ]);
 
             session()->setFlashdata('pesan', 'Layanan berhasil Diubah');
@@ -72,7 +72,7 @@ class Layanan extends BaseController
 
     public function delete($id)
     {
-        $this->layananModel->delete($id);
+        $this->LayananModel->delete($id);
         session()->setFlashdata('pesan', 'Layanan berhasil dihapus!');
         return redirect()->to('/admin/layanan');
     }

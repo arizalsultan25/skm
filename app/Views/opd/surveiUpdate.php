@@ -9,7 +9,7 @@
             </div>
             <div class="col-sm-6">
                 <ol class="breadcrumb float-sm-right">
-                    <li class="breadcrumb-item"><a href="/testing">Home</a></li>
+                    <li class="breadcrumb-item"><a href="/testingg">Home</a></li>
                     <li class="breadcrumb-item active">Survei</li>
                 </ol>
             </div>
@@ -21,7 +21,7 @@
                         Update Survei
                     </div>
                     <form action="/opd/survei/update/<?= $surveiId->id ?>" method="POST">
-                        <input type="hidden" name="id_survei" value="<?= $surveiId->id ?>">
+                        <input type="hidden" name="survei_id" value="<?= $surveiId->id ?>">
                         <div class="card-body">
                             <?= csrf_field(); ?>
                             <div class="form-group">

@@ -8,16 +8,16 @@ class Pertanyaan extends BaseController
 {
     public function __construct()
     {
-        $this->pertanyaanModel = new PertanyaanModel();
+        $this->PertanyaanModel = new PertanyaanModel();
     }
 
     public function index($id = FALSE)
     {
         $data = [
             'title' => 'Pertanyaan',
-            'survei' => $this->pertanyaanModel->getSurveiById($id),
-            'pertanyaan' => $this->pertanyaanModel->getPertanyaan($id),
-            'jawaban' => $this->pertanyaanModel->getJawaban($id)
+            'survei' => $this->PertanyaanModel->getSurveiById($id),
+            'pertanyaan' => $this->PertanyaanModel->getPertanyaan($id),
+            'jawaban' => $this->PertanyaanModel->getJawaban($id)
         ];
         return view('pertanyaan', $data);
     }

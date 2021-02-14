@@ -26,10 +26,10 @@
                         <div class="card-body">
                             <div class="form-group">
                                 <label>Referensi Unsur</label>
-                                <select name="ref_id" class="custom-select">
+                                <select name="referensiunsur_id" class="custom-select">
                                     <option selected>Pilih Referensi Unsur</option>
-                                    <?php foreach ($refUnsur as $item) : ?>
-                                        <option value="<?= $item->id ?>" <?= ($item->id == $pertanyaan->ref_id) ? 'selected' : '' ?>><?= $item->nama ?></option>
+                                    <?php foreach ($referensiunsur as $item) : ?>
+                                        <option value="<?= $item->id ?>" <?= ($item->id == $pertanyaan->referensiunsur_id) ? 'selected' : '' ?>><?= $item->nama ?></option>
                                     <?php endforeach; ?>
                                 </select>
                             </div>

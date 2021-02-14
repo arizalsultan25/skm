@@ -49,30 +49,35 @@ $routes->group('admin', function ($routes) {
 	$routes->add('website/update/(:num)', 'Admin\Website::update/$1');
 	$routes->delete('website/(:num)', 'Admin\Website::delete/$1');
 
-	$routes->get('unitlayanan', 'Admin\UnitLayanan::index');
-	$routes->get('unitlayanan/create', 'Admin\UnitLayanan::create');
-	$routes->get('unitlayanan/update/(:num)', 'Admin\UnitLayanan::update/$1');
-	$routes->delete('unitlayanan/(:num)', 'Admin\UnitLayanan::delete/$1');
+	$routes->get('unitlayanan', 'Admin\Unitlayanan::index');
+	$routes->get('unitlayanan/create', 'Admin\Unitlayanan::create');
+	$routes->get('unitlayanan/update/(:num)', 'Admin\Unitlayanan::update/$1');
+	$routes->delete('unitlayanan/(:num)', 'Admin\Unitlayanan::delete/$1');
+
+	$routes->add('akunopd', 'Admin\Akunopd::index');
+	$routes->add('akunopd/create', 'Admin\Akunopd::create');
+	$routes->add('akunopd/update/(:num)', 'Admin\Akunopdn::update/$1');
+	$routes->delete('akunopd/(:num)', 'Admin\Akunopd::delete/$1');
 
 	$routes->add('layanan', 'Admin\Layanan::index');
 	$routes->add('layanan/create', 'Admin\Layanan::create');
 	$routes->add('layanan/update/(:num)', 'Admin\Layanan::update/$1');
 	$routes->delete('layanan/(:num)', 'Admin\Layanan::delete/$1');
 
-	$routes->add('domainsurvei', 'Admin\DomainSurvei::index');
-	$routes->add('domainsurvei/create', 'Admin\DomainSurvei::create');
-	$routes->add('domainsurvei/update/(:num)', 'Admin\DomainSurvei::update/$1');
-	$routes->delete('domainsurvei/(:num)', 'Admin\DomainSurvei::delete/$1');
+	$routes->add('domainsurvei', 'Admin\Domainsurvei::index');
+	$routes->add('domainsurvei/create', 'Admin\Domainsurvei::create');
+	$routes->add('domainsurvei/update/(:num)', 'Admin\Domainsurvei::update/$1');
+	$routes->delete('domainsurvei/(:num)', 'Admin\Domainsurvei::delete/$1');
 
 	$routes->get('survei', 'Admin\Survei::index');
 	$routes->get('survei/create', 'Admin\Survei::create');
 	$routes->get('survei/update(:num)', 'Admin\Survei::update/$1');
 	$routes->delete('survei/(:num)', 'Admin\Survei::delete/$1');
 
-	$routes->get('referensiunsur', 'Admin\ReferensiUnsur::index');
-	$routes->post('referensiunsur/create', 'Admin\ReferensiUnsur::create');
-	$routes->add('referensiunsur/update/(:num)', 'Admin\ReferensiUnsur::update/$1');
-	$routes->delete('referensiunsur/(:num)', 'Admin\ReferensiUnsur::delete/$1');
+	$routes->get('referensiunsur', 'Admin\Referensiunsur::index');
+	$routes->post('referensiunsur/create', 'Admin\Referensiunsur::create');
+	$routes->add('referensiunsur/update/(:num)', 'Admin\Referensiunsur::update/$1');
+	$routes->delete('referensiunsur/(:num)', 'Admin\Referensiunsur::delete/$1');
 
 	$routes->get('pertanyaan', 'Admin\Pertanyaan::index');
 	$routes->post('pertanyaan/create', 'Admin\Pertanyaan::create');
@@ -84,13 +89,13 @@ $routes->group('admin', function ($routes) {
 	$routes->post('jawaban/update/(:num)', 'Admin\Jawaban::update/$1');
 	$routes->delete('jawaban/(:num)', 'Admin\Jawaban::delete/$1');
 
-	$routes->get('survei_unsur', 'Admin\SurveiUnsur::index');
-	$routes->post('survei_unsur/create', 'Admin\SurveiUnsur::create');
-	$routes->add('survei_unsur/update/(:num)', 'Admin\SurveiUnsur::update/$1');
-	$routes->delete('survei_unsur/(:num)', 'Admin\SurveiUnsur::delete/$1');
+	$routes->get('surveiunsur', 'Admin\Surveiunsur::index');
+	$routes->post('surveiunsur/create', 'Admin\Surveiunsur::create');
+	$routes->add('surveiunsur/update/(:num)', 'Admin\Surveiunsur::update/$1');
+	$routes->delete('surveiunsur/(:num)', 'Admin\Surveiunsur::delete/$1');
 });
 
-$routes->add('opd', 'Opd\Layanan::index');
+//$routes->add('opd', 'Opd\Layanan::index');
 $routes->group('opd', function ($routes) {
 
 	$routes->add('layanan', 'Opd\Layanan::index');
@@ -98,20 +103,20 @@ $routes->group('opd', function ($routes) {
 	$routes->add('layanan/update/(:num)', 'Opd\Layanan::update/$1');
 	$routes->delete('layanan/(:num)', 'Opd\Layanan::delete/$1');
 
-	$routes->add('domainsurvei', 'Opd\DomainSurvei::index');
-	$routes->add('domainsurvei/create', 'Opd\DomainSurvei::create');
-	$routes->add('domainsurvei/update/(:num)', 'Opd\DomainSurvei::update/$1');
-	$routes->delete('domainsurvei/(:num)', 'Opd\DomainSurvei::delete/$1');
+	$routes->add('domainsurvei', 'Opd\Domainsurvei::index');
+	$routes->add('domainsurvei/create', 'Opd\Domainsurvei::create');
+	$routes->add('domainsurvei/update/(:num)', 'Opd\Domainsurvei::update/$1');
+	$routes->delete('domainsurvei/(:num)', 'Opd\Domainsurvei::delete/$1');
 
 	$routes->get('survei', 'Opd\Survei::index');
 	$routes->get('survei/create', 'Opd\Survei::create');
 	$routes->get('survei/update(:num)', 'Opd\Survei::update/$1');
 	$routes->delete('survei/(:num)', 'Opd\Survei::delete/$1');
 
-	$routes->get('referensiunsur', 'Opd\ReferensiUnsur::index');
-	$routes->post('referensiunsur/create', 'Opd\ReferensiUnsur::create');
-	$routes->add('referensiunsur/update/(:num)', 'Opd\ReferensiUnsur::update/$1');
-	$routes->delete('referensiunsur/(:num)', 'Opd\ReferensiUnsur::delete/$1');
+	$routes->get('referensiunsur', 'Opd\Referensiunsur::index');
+	$routes->post('referensiunsur/create', 'Opd\Referensiunsur::create');
+	$routes->add('referensiunsur/update/(:num)', 'Opd\Referensiunsur::update/$1');
+	$routes->delete('referensiunsur/(:num)', 'Opd\Referensiunsur::delete/$1');
 
 	$routes->get('pertanyaan', 'Opd\Pertanyaan::index');
 	$routes->post('pertanyaan/create', 'Opd\Pertanyaan::create');
@@ -123,10 +128,10 @@ $routes->group('opd', function ($routes) {
 	$routes->post('jawaban/update/(:num)', 'Opd\Jawaban::update/$1');
 	$routes->delete('jawaban/(:num)', 'Opd\Jawaban::delete/$1');
 
-	$routes->get('unsur-survei', 'Opd\SurveiUnsur::index');
-	$routes->post('unsur-survei/create', 'Opd\SurveiUnsur::create');
-	$routes->add('unsur-survei/update/(:num)', 'Opd\SurveiUnsur::update/$1');
-	$routes->delete('unsur-survei/(:num)', 'Opd\SurveiUnsur::delete/$1');
+	$routes->get('unsursurvei', 'Opd\Surveiunsur::index');
+	$routes->post('unsursurvei/create', 'Opd\Surveiunsur::create');
+	$routes->add('unsursurvei/update/(:num)', 'Opd\Surveiunsur::update/$1');
+	$routes->delete('unsursurvei/(:num)', 'Opd\Surveiunsur::delete/$1');
 
 });
 /**

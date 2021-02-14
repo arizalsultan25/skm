@@ -1,0 +1,214 @@
+CRITICAL - 2021-02-05 01:39:13 --> Undefined variable: web
+#0 C:\xampp\htdocs\skm2020\app\Views\admin\websiteUpdate.php(20): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 20, Array)
+#1 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\Common.php(1119): CodeIgniter\View\View->render('admin/websiteUp...', Array, true)
+#3 C:\xampp\htdocs\skm2020\app\Controllers\Admin\Website.php(51): view('admin/websiteUp...', Array)
+#4 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\Admin\Website->update('9')
+#5 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Website))
+#6 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\skm2020\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2021-02-05 01:41:26 --> Trying to get property 'id' of non-object
+#0 C:\xampp\htdocs\skm2020\app\Views\admin\websiteUpdate.php(20): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get p...', 'C:\\xampp\\htdocs...', 20, Array)
+#1 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\Common.php(1119): CodeIgniter\View\View->render('admin/websiteUp...', Array, true)
+#3 C:\xampp\htdocs\skm2020\app\Controllers\Admin\Website.php(51): view('admin/websiteUp...', Array)
+#4 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\Admin\Website->update('9')
+#5 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Website))
+#6 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\skm2020\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2021-02-05 01:42:35 --> Undefined variable: units
+#0 C:\xampp\htdocs\skm2020\app\Views\admin\unitlayanan.php(56): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 56, Array)
+#1 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\Common.php(1119): CodeIgniter\View\View->render('admin/unitlayan...', Array, true)
+#3 C:\xampp\htdocs\skm2020\app\Controllers\Admin\Unitlayanan.php(23): view('admin/unitlayan...', Array)
+#4 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\Admin\Unitlayanan->index()
+#5 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Unitlayanan))
+#6 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\skm2020\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2021-02-05 01:43:18 --> Undefined variable: units
+#0 C:\xampp\htdocs\skm2020\app\Views\admin\layanan.php(37): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 37, Array)
+#1 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\Common.php(1119): CodeIgniter\View\View->render('admin/layanan', Array, true)
+#3 C:\xampp\htdocs\skm2020\app\Controllers\Admin\Layanan.php(25): view('admin/layanan', Array)
+#4 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\Admin\Layanan->index()
+#5 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Layanan))
+#6 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\skm2020\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2021-02-05 01:43:37 --> Undefined variable: layanan
+#0 C:\xampp\htdocs\skm2020\app\Views\admin\layanan.php(66): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 66, Array)
+#1 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\Common.php(1119): CodeIgniter\View\View->render('admin/layanan', Array, true)
+#3 C:\xampp\htdocs\skm2020\app\Controllers\Admin\Layanan.php(25): view('admin/layanan', Array)
+#4 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\Admin\Layanan->index()
+#5 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Layanan))
+#6 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\skm2020\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2021-02-05 01:44:59 --> Undefined variable: layanan
+#0 C:\xampp\htdocs\skm2020\app\Views\admin\layanan.php(66): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 66, Array)
+#1 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\Common.php(1119): CodeIgniter\View\View->render('admin/layanan', Array, true)
+#3 C:\xampp\htdocs\skm2020\app\Controllers\Admin\Layanan.php(25): view('admin/layanan', Array)
+#4 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\Admin\Layanan->index()
+#5 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Layanan))
+#6 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\skm2020\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2021-02-05 01:45:29 --> Undefined property: App\Controllers\Admin\Domainsurvei::$WebsiteModel
+#0 C:\xampp\htdocs\skm2020\app\Controllers\Admin\Domainsurvei.php(24): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\xampp\\htdocs...', 24, Array)
+#1 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\Admin\Domainsurvei->index()
+#2 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Domainsurvei))
+#3 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\skm2020\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2021-02-05 01:46:07 --> Undefined variable: referensi
+#0 C:\xampp\htdocs\skm2020\app\Views\admin\referensiunsur.php(57): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 57, Array)
+#1 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\Common.php(1119): CodeIgniter\View\View->render('admin/referensi...', Array, true)
+#3 C:\xampp\htdocs\skm2020\app\Controllers\Admin\Referensiunsur.php(23): view('admin/referensi...', Array)
+#4 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\Admin\Referensiunsur->index()
+#5 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Referensiunsur))
+#6 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\skm2020\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2021-02-05 01:46:40 --> Cannot declare class App\Controllers\Admin\Jawaban because the name is already in use
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2021-02-05 01:47:09 --> Undefined variable: layanan
+#0 C:\xampp\htdocs\skm2020\app\Views\admin\survei.php(37): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 37, Array)
+#1 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\Common.php(1119): CodeIgniter\View\View->render('admin/survei', Array, true)
+#3 C:\xampp\htdocs\skm2020\app\Controllers\Admin\Survei.php(26): view('admin/survei', Array)
+#4 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\Admin\Survei->index()
+#5 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Survei))
+#6 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\skm2020\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2021-02-05 01:47:59 --> Call to undefined method App\Models\AkunopdModel::getAllAkunopd
+#0 C:\xampp\htdocs\skm2020\app\Controllers\Admin\Akunopd.php(22): CodeIgniter\Model->__call('getAllAkunopd', Array)
+#1 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\Admin\Akunopd->index()
+#2 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Akunopd))
+#3 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\skm2020\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2021-02-05 01:49:41 --> Call to undefined method App\Models\AkunopdModel::getAllAkunopd
+#0 C:\xampp\htdocs\skm2020\app\Controllers\Admin\Akunopd.php(22): CodeIgniter\Model->__call('getAllAkunopd', Array)
+#1 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\Admin\Akunopd->index()
+#2 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Akunopd))
+#3 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\skm2020\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2021-02-05 01:56:35 --> Undefined variable: layanan
+#0 C:\xampp\htdocs\skm2020\app\Views\admin\layanan.php(66): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 66, Array)
+#1 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\Common.php(1119): CodeIgniter\View\View->render('admin/layanan', Array, true)
+#3 C:\xampp\htdocs\skm2020\app\Controllers\Admin\Layanan.php(25): view('admin/layanan', Array)
+#4 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\Admin\Layanan->index()
+#5 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Layanan))
+#6 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\skm2020\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2021-02-05 01:59:36 --> Undefined variable: layanan
+#0 C:\xampp\htdocs\skm2020\app\Views\admin\layanan.php(66): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 66, Array)
+#1 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\Common.php(1119): CodeIgniter\View\View->render('admin/layanan', Array, true)
+#3 C:\xampp\htdocs\skm2020\app\Controllers\Admin\Layanan.php(25): view('admin/layanan', Array)
+#4 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\Admin\Layanan->index()
+#5 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Layanan))
+#6 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\skm2020\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2021-02-05 02:00:41 --> Undefined variable: layanan
+#0 C:\xampp\htdocs\skm2020\app\Views\admin\layanan.php(66): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 66, Array)
+#1 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\Common.php(1119): CodeIgniter\View\View->render('admin/layanan', Array, true)
+#3 C:\xampp\htdocs\skm2020\app\Controllers\Admin\Layanan.php(25): view('admin/layanan', Array)
+#4 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\Admin\Layanan->index()
+#5 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Layanan))
+#6 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\skm2020\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2021-02-05 02:00:49 --> Undefined property: stdClass::$nama_unitlayanan
+#0 C:\xampp\htdocs\skm2020\app\Views\admin\layanan.php(70): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\xampp\\htdocs...', 70, Array)
+#1 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\Common.php(1119): CodeIgniter\View\View->render('admin/layanan', Array, true)
+#3 C:\xampp\htdocs\skm2020\app\Controllers\Admin\Layanan.php(25): view('admin/layanan', Array)
+#4 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\Admin\Layanan->index()
+#5 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Layanan))
+#6 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\skm2020\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2021-02-05 02:02:51 --> Undefined property: stdClass::$nama_unit
+#0 C:\xampp\htdocs\skm2020\app\Views\admin\layanan.php(70): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\xampp\\htdocs...', 70, Array)
+#1 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\Common.php(1119): CodeIgniter\View\View->render('admin/layanan', Array, true)
+#3 C:\xampp\htdocs\skm2020\app\Controllers\Admin\Layanan.php(25): view('admin/layanan', Array)
+#4 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\Admin\Layanan->index()
+#5 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Layanan))
+#6 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\skm2020\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2021-02-05 02:02:51 --> Undefined property: stdClass::$nama_unit
+#0 C:\xampp\htdocs\skm2020\app\Views\admin\layanan.php(70): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\xampp\\htdocs...', 70, Array)
+#1 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\Common.php(1119): CodeIgniter\View\View->render('admin/layanan', Array, true)
+#3 C:\xampp\htdocs\skm2020\app\Controllers\Admin\Layanan.php(25): view('admin/layanan', Array)
+#4 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\Admin\Layanan->index()
+#5 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Layanan))
+#6 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\skm2020\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2021-02-05 02:02:52 --> Undefined property: stdClass::$nama_unit
+#0 C:\xampp\htdocs\skm2020\app\Views\admin\layanan.php(70): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\xampp\\htdocs...', 70, Array)
+#1 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\Common.php(1119): CodeIgniter\View\View->render('admin/layanan', Array, true)
+#3 C:\xampp\htdocs\skm2020\app\Controllers\Admin\Layanan.php(25): view('admin/layanan', Array)
+#4 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\Admin\Layanan->index()
+#5 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Layanan))
+#6 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\skm2020\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2021-02-05 02:03:14 --> Undefined property: stdClass::$unitlayanan
+#0 C:\xampp\htdocs\skm2020\app\Views\admin\layanan.php(70): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\xampp\\htdocs...', 70, Array)
+#1 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\Common.php(1119): CodeIgniter\View\View->render('admin/layanan', Array, true)
+#3 C:\xampp\htdocs\skm2020\app\Controllers\Admin\Layanan.php(25): view('admin/layanan', Array)
+#4 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\Admin\Layanan->index()
+#5 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Layanan))
+#6 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\skm2020\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2021-02-05 02:04:07 --> Undefined property: stdClass::$nama_unit
+#0 C:\xampp\htdocs\skm2020\app\Views\admin\layanan.php(70): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\xampp\\htdocs...', 70, Array)
+#1 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\Common.php(1119): CodeIgniter\View\View->render('admin/layanan', Array, true)
+#3 C:\xampp\htdocs\skm2020\app\Controllers\Admin\Layanan.php(25): view('admin/layanan', Array)
+#4 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\Admin\Layanan->index()
+#5 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Layanan))
+#6 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\skm2020\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#9 {main}

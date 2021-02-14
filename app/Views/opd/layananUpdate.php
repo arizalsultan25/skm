@@ -9,7 +9,7 @@
             </div>
             <div class="col-sm-6">
                 <ol class="breadcrumb float-sm-right">
-                    <li class="breadcrumb-item"><a href="/testing">Home</a></li>
+                    <li class="breadcrumb-item"><a href="/testingg">Home</a></li>
                     <li class="breadcrumb-item active">Layanan-update</li>
                 </ol>
             </div>
@@ -35,14 +35,14 @@
                             </div>
                             <div class="form-group">
                                 <label>Unit Layanan</label>
-                                <select name="unit_id" class="custom-select">
-                                    <?php foreach ($units as $item) : ?>
+                                <select name="unitlayanan_id" class="custom-select">
+                                    <?php foreach ($unitlayanan as $item) : ?>
                                         <option value="<?= $item->id ?>" <?php echo ($item->id == $layanan->unit_id) ? 'selected' : '' ?>><?= $item->nama; ?></option>
                                     <?php endforeach; ?>
                                 </select>
                                 <div class="invalid-feedback">
-                                    <?php if ($validation->hasError('unit_id')) {
-                                        echo $validation->getError('unit_id');
+                                    <?php if ($validation->hasError('unitlayanan_id')) {
+                                        echo $validation->getError('unitlayanan_id');
                                     } ?>
                                 </div>
                             </div>

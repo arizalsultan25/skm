@@ -1,0 +1,71 @@
+CRITICAL - 2021-02-07 00:15:14 --> Unknown column 'b.referensiunsur_id' in 'field list'
+#0 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT `a`.*, `...')
+#1 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\Database\BaseConnection.php(741): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `a`.*, `...')
+#2 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\Database\BaseConnection.php(669): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `a`.*, `...')
+#3 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1860): CodeIgniter\Database\BaseConnection->query('SELECT `a`.*, `...', Array, false)
+#4 C:\xampp\htdocs\skm2020\app\Models\PertanyaanModel.php(67): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\skm2020\app\Controllers\Pertanyaan.php(20): App\Models\PertanyaanModel->getJawaban('1')
+#6 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\Pertanyaan->index('1')
+#7 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pertanyaan))
+#8 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\skm2020\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2021-02-07 00:15:20 --> Unknown column 'b.referensiunsur_id' in 'field list'
+#0 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT `a`.*, `...')
+#1 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\Database\BaseConnection.php(741): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `a`.*, `...')
+#2 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\Database\BaseConnection.php(669): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `a`.*, `...')
+#3 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1860): CodeIgniter\Database\BaseConnection->query('SELECT `a`.*, `...', Array, false)
+#4 C:\xampp\htdocs\skm2020\app\Models\PertanyaanModel.php(67): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\skm2020\app\Controllers\Pertanyaan.php(20): App\Models\PertanyaanModel->getJawaban('1')
+#6 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\Pertanyaan->index('1')
+#7 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pertanyaan))
+#8 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\skm2020\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2021-02-07 00:24:29 --> syntax error, unexpected '.'
+#0 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\Common.php(1119): CodeIgniter\View\View->render('survei', Array, true)
+#1 C:\xampp\htdocs\skm2020\app\Controllers\Survei.php(27): view('survei', Array)
+#2 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\Survei->index('survei-kualitas...')
+#3 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Survei))
+#4 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\skm2020\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#7 {main}
+CRITICAL - 2021-02-07 01:24:54 --> Undefined variable: layanan
+#0 C:\xampp\htdocs\skm2020\app\Views\admin\survei.php(37): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 37, Array)
+#1 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\Common.php(1119): CodeIgniter\View\View->render('admin/survei', Array, true)
+#3 C:\xampp\htdocs\skm2020\app\Controllers\Admin\Survei.php(26): view('admin/survei', Array)
+#4 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\Admin\Survei->index()
+#5 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Survei))
+#6 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\skm2020\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2021-02-07 01:42:20 --> Cannot declare class App\Controllers\Admin\Jawaban because the name is already in use
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2021-02-07 01:42:36 --> Undefined variable: pertanyaan
+#0 C:\xampp\htdocs\skm2020\app\Views\admin\jawaban.php(30): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 30, Array)
+#1 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\Common.php(1119): CodeIgniter\View\View->render('admin/jawaban', Array, true)
+#3 C:\xampp\htdocs\skm2020\app\Controllers\Admin\Jawaban.php(30): view('admin/jawaban', Array)
+#4 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\Admin\Jawaban->index()
+#5 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Jawaban))
+#6 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\skm2020\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2021-02-07 01:42:38 --> Undefined variable: pertanyaan
+#0 C:\xampp\htdocs\skm2020\app\Views\admin\jawaban.php(30): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 30, Array)
+#1 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\Common.php(1119): CodeIgniter\View\View->render('admin/jawaban', Array, true)
+#3 C:\xampp\htdocs\skm2020\app\Controllers\Admin\Jawaban.php(30): view('admin/jawaban', Array)
+#4 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\Admin\Jawaban->index()
+#5 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Jawaban))
+#6 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\skm2020\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#9 {main}

@@ -4,28 +4,28 @@ namespace App\Controllers\Opd;
 
 use App\Controllers\BaseController;
 use App\Models\JawabanModel;
-use App\Models\ReferensiUnsurModel;
-use App\Models\Jawab;
+use App\Models\ReferensiunsurModel;
+// use App\Models\Jawaban;
 use App\Models\PertanyaanModel;
 
 class Jawaban extends BaseController
 {
     public function __construct()
     {
-        $this->jawabanModel = new JawabanModel();
-        $this->RefUnsurModel = new ReferensiUnsurModel();
-        $this->pertanyaanModel = new PertanyaanModel();
-        $this->Jawab = new Jawab();
+        $this->JawabanModel = new JawabanModel();
+        $this->ReferensiunsurModel = new ReferensiunsurModel();
+        $this->PertanyaanModel = new PertanyaanModel();
+        // $this->Jawaban = new Jawaban();
     }
 
     public function index()
     {
         $data = [
             'title' => 'Daftar Jawaban | Survei Batam',
-            'jawaban' => $this->jawabanModel->getJawaban(),
-            'refUnsur' => $this->RefUnsurModel->getReferensi(),
+            'jawaban' => $this->JawabanModel->getJawaban(),
+            'referensiunsur' => $this->ReferensiunsurModel->getReferensiunsur(),
             'validation' => \Config\Services::validation(),
-            'pertanyaan' => $this->pertanyaanModel->getAllPertanyaan()
+            'pertanyaan' => $this->PertanyaanModel->getAllPertanyaan()
         ];
         return view('opd/jawaban', $data);
     }
@@ -34,7 +34,7 @@ class Jawaban extends BaseController
     {
         if (!$this->validate(
             [
-                'ref_id' => 'required',
+                'referensiunsur_id' => 'required',
                 'jawaban' => 'required',
                 'bobot' => 'required',
             ]
@@ -42,12 +42,12 @@ class Jawaban extends BaseController
             return redirect()->to('/opd/jawaban')->withInput();
         }
         $data = [
-            'pertanyaan_id' => $this->request->getVar('ref_id'),
+            'pertanyaan_id' => $this->request->getVar('referensiunsur_id'),
             'jawaban' => $this->request->getVar('jawaban'),
             'nilai' => $this->request->getVar('bobot')
         ];
 
-        $this->jawabanModel->save($data);       
+        $this->JawabanModel->save($data);       
         session()->setFlashdata('pesan', 'Jawaban berhasil ditambahkan');
         return redirect()->to('/opd/jawaban');
         var_dump($data);
@@ -59,24 +59,24 @@ class Jawaban extends BaseController
         if (!isset($_POST['update'])) {
             $data = [
                 'title' => 'Daftar Jawaban | Survei Batam',
-                'jawaban' => $this->jawabanModel->getJawaban($id),
-                'refUnsur' => $this->RefUnsurModel->getReferensi(),
-                'pertanyaan' => $this->pertanyaanModel->getAllPertanyaan(),
+                'jawaban' => $this->JawabanModel->getJawaban($id),
+                'referensiunsur' => $this->ReferensiunsurModel->getReferensiunsur(),
+                'pertanyaan' => $this->PertanyaanModel->getAllPertanyaan(),
                 'validation' => \Config\Services::validation()
             ];
             return view('opd/jawabanUpdate', $data);
         } else {
             if (!$this->validate([
-                'ref_id' => 'required',
+                'referensiunsur_id' => 'required',
                 'jawaban' => 'required',
                 'nilai' => 'required'
             ])) {
                 return redirect()->to('/opd/jawaban/update/' . $id)->withInput();
             }
 
-            $this->jawabanModel->save([
+            $this->JawabanModel->save([
                 'id' => $this->request->getVar('id'),
-                'pertanyaan_id' => $this->request->getVar('ref_id'),
+                'pertanyaan_id' => $this->request->getVar('referensiunsur_id'),
                 'jawaban' => $this->request->getVar('jawaban'),
                 'nilai' => $this->request->getVar('nilai')
             ]);
@@ -88,7 +88,7 @@ class Jawaban extends BaseController
 
     public function delete($id)
     {
-        $this->jawabanModel->delete($id);
+        $this->JawabanModel->delete($id);
         session()->setFlashdata('pesan', 'Jawaban berhasil dihapus!');
         return redirect()->to('/opd/jawaban');
     }

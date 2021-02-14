@@ -17,8 +17,8 @@
         <div class="row">
             <div class="col-sm-12">
                 <div class="card">
-                    <form action="/admin/website/update/<?= $web->id ?>" method="POST">
-                        <input type="hidden" name="website_id" value="<?php echo $web->id; ?>">
+                    <form action="/admin/website/update/<?= $website->id ?>" method="POST">
+                        <input type="hidden" name="website_id" value="<?php echo $website->id; ?>">
                         <div class="card-header bg-primary">
                             Update Website
                         </div>

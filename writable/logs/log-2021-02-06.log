@@ -1,0 +1,337 @@
+CRITICAL - 2021-02-06 23:04:24 --> Unable to connect to the database.
+#0 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1860): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#2 C:\xampp\htdocs\skm2020\app\Models\WebsiteModel.php(24): CodeIgniter\Database\BaseBuilder->get()
+#3 C:\xampp\htdocs\skm2020\app\Controllers\Admin\Website.php(19): App\Models\WebsiteModel->getWebsite()
+#4 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\Admin\Website->index()
+#5 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Website))
+#6 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\skm2020\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2021-02-06 23:08:08 --> Undefined property: App\Controllers\Home::$session
+#0 C:\xampp\htdocs\skm2020\app\Controllers\Home.php(26): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\xampp\\htdocs...', 26, Array)
+#1 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\Home->LoginProcess()
+#2 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\skm2020\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2021-02-06 23:09:45 --> Undefined property: App\Controllers\Home::$load
+#0 C:\xampp\htdocs\skm2020\app\Controllers\Home.php(10): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\xampp\\htdocs...', 10, Array)
+#1 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(890): App\Controllers\Home->__construct()
+#2 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->createController()
+#3 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\skm2020\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2021-02-06 23:10:49 --> Undefined property: App\Controllers\Home::$load
+#0 C:\xampp\htdocs\skm2020\app\Controllers\Home.php(10): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\xampp\\htdocs...', 10, Array)
+#1 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(890): App\Controllers\Home->__construct()
+#2 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->createController()
+#3 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\skm2020\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2021-02-06 23:10:51 --> Undefined property: App\Controllers\Home::$load
+#0 C:\xampp\htdocs\skm2020\app\Controllers\Home.php(10): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\xampp\\htdocs...', 10, Array)
+#1 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(890): App\Controllers\Home->__construct()
+#2 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->createController()
+#3 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\skm2020\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2021-02-06 23:10:52 --> Undefined property: App\Controllers\Home::$load
+#0 C:\xampp\htdocs\skm2020\app\Controllers\Home.php(10): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\xampp\\htdocs...', 10, Array)
+#1 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(890): App\Controllers\Home->__construct()
+#2 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->createController()
+#3 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\skm2020\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2021-02-06 23:10:56 --> Undefined property: App\Controllers\Home::$session
+#0 C:\xampp\htdocs\skm2020\app\Controllers\Home.php(33): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\xampp\\htdocs...', 33, Array)
+#1 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\Home->LoginProcess()
+#2 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\skm2020\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2021-02-06 23:10:57 --> Undefined property: App\Controllers\Home::$session
+#0 C:\xampp\htdocs\skm2020\app\Controllers\Home.php(33): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\xampp\\htdocs...', 33, Array)
+#1 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\Home->LoginProcess()
+#2 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\skm2020\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2021-02-06 23:11:46 --> Unable to connect to the database.
+#0 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1860): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#2 C:\xampp\htdocs\skm2020\app\Models\UnitlayananModel.php(23): CodeIgniter\Database\BaseBuilder->get()
+#3 C:\xampp\htdocs\skm2020\app\Controllers\Opd\Layanan.php(21): App\Models\UnitlayananModel->getUnitlayanan()
+#4 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\Opd\Layanan->index()
+#5 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Opd\Layanan))
+#6 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\skm2020\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2021-02-06 23:11:57 --> Unable to connect to the database.
+#0 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1860): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#2 C:\xampp\htdocs\skm2020\app\Models\UnitlayananModel.php(23): CodeIgniter\Database\BaseBuilder->get()
+#3 C:\xampp\htdocs\skm2020\app\Controllers\Opd\Layanan.php(21): App\Models\UnitlayananModel->getUnitlayanan()
+#4 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\Opd\Layanan->index()
+#5 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Opd\Layanan))
+#6 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\skm2020\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2021-02-06 23:12:52 --> Unable to connect to the database.
+#0 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1860): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#2 C:\xampp\htdocs\skm2020\app\Models\UnitlayananModel.php(23): CodeIgniter\Database\BaseBuilder->get()
+#3 C:\xampp\htdocs\skm2020\app\Controllers\Opd\Layanan.php(21): App\Models\UnitlayananModel->getUnitlayanan()
+#4 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\Opd\Layanan->index()
+#5 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Opd\Layanan))
+#6 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\skm2020\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2021-02-06 23:13:39 --> Undefined property: App\Controllers\Opd\Domainsurvei::$DomainsurveiModel
+#0 C:\xampp\htdocs\skm2020\app\Controllers\Opd\DomainSurvei.php(23): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\xampp\\htdocs...', 23, Array)
+#1 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\Opd\Domainsurvei->index()
+#2 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Opd\Domainsurvei))
+#3 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\skm2020\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2021-02-06 23:13:46 --> Unable to connect to the database.
+#0 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1860): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#2 C:\xampp\htdocs\skm2020\app\Models\ReferensiunsurModel.php(22): CodeIgniter\Database\BaseBuilder->get()
+#3 C:\xampp\htdocs\skm2020\app\Controllers\Opd\Referensiunsur.php(19): App\Models\ReferensiunsurModel->getReferensiunsur()
+#4 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\Opd\Referensiunsur->index()
+#5 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Opd\Referensiunsur))
+#6 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\skm2020\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2021-02-06 23:13:53 --> Unable to connect to the database.
+#0 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1860): CodeIgniter\Database\BaseConnection->query('SELECT `a`.*, `...', Array, false)
+#2 C:\xampp\htdocs\skm2020\app\Models\PertanyaanModel.php(32): CodeIgniter\Database\BaseBuilder->get()
+#3 C:\xampp\htdocs\skm2020\app\Controllers\Opd\Pertanyaan.php(21): App\Models\PertanyaanModel->get()
+#4 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\Opd\Pertanyaan->index()
+#5 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Opd\Pertanyaan))
+#6 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\skm2020\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2021-02-06 23:13:57 --> Undefined property: App\Controllers\Opd\Domainsurvei::$DomainsurveiModel
+#0 C:\xampp\htdocs\skm2020\app\Controllers\Opd\DomainSurvei.php(23): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\xampp\\htdocs...', 23, Array)
+#1 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\Opd\Domainsurvei->index()
+#2 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Opd\Domainsurvei))
+#3 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\skm2020\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2021-02-06 23:16:35 --> Unable to connect to the database.
+#0 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1860): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#2 C:\xampp\htdocs\skm2020\app\Models\WebsiteModel.php(24): CodeIgniter\Database\BaseBuilder->get()
+#3 C:\xampp\htdocs\skm2020\app\Controllers\Opd\DomainSurvei.php(24): App\Models\WebsiteModel->getWebsite()
+#4 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\Opd\Domainsurvei->index()
+#5 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Opd\Domainsurvei))
+#6 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\skm2020\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2021-02-06 23:17:48 --> Undefined property: App\Controllers\Opd\Domainsurvei::$DomainsurveiModel
+#0 C:\xampp\htdocs\skm2020\app\Controllers\Opd\DomainSurvei.php(23): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\xampp\\htdocs...', 23, Array)
+#1 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\Opd\Domainsurvei->index()
+#2 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Opd\Domainsurvei))
+#3 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\skm2020\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2021-02-06 23:18:14 --> Table 'skm.unitlayanan' doesn't exist
+#0 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT *\nFROM `...')
+#1 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\Database\BaseConnection.php(741): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\Database\BaseConnection.php(669): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1860): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\skm2020\app\Models\UnitlayananModel.php(23): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\skm2020\app\Controllers\Opd\Layanan.php(21): App\Models\UnitlayananModel->getUnitlayanan()
+#6 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\Opd\Layanan->index()
+#7 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Opd\Layanan))
+#8 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\skm2020\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2021-02-06 23:19:17 --> Undefined property: stdClass::$nama_unit
+#0 C:\xampp\htdocs\skm2020\app\Views\opd\layanan.php(70): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\xampp\\htdocs...', 70, Array)
+#1 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\Common.php(1119): CodeIgniter\View\View->render('opd/layanan', Array, true)
+#3 C:\xampp\htdocs\skm2020\app\Controllers\Opd\Layanan.php(25): view('opd/layanan', Array)
+#4 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\Opd\Layanan->index()
+#5 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Opd\Layanan))
+#6 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\skm2020\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2021-02-06 23:21:32 --> Undefined variable: referensi
+#0 C:\xampp\htdocs\skm2020\app\Views\opd\referensiunsur.php(57): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 57, Array)
+#1 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\Common.php(1119): CodeIgniter\View\View->render('opd/referensiun...', Array, true)
+#3 C:\xampp\htdocs\skm2020\app\Controllers\Opd\Referensiunsur.php(23): view('opd/referensiun...', Array)
+#4 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\Opd\Referensiunsur->index()
+#5 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Opd\Referensiunsur))
+#6 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\skm2020\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2021-02-06 23:22:47 --> Cannot declare class App\Controllers\Opd\Jawaban because the name is already in use
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2021-02-06 23:23:35 --> Allowed memory size of 536870912 bytes exhausted (tried to allocate 20480 bytes)
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2021-02-06 23:23:38 --> Allowed memory size of 536870912 bytes exhausted (tried to allocate 20480 bytes)
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2021-02-06 23:33:05 --> Undefined property: App\Controllers\Opd\Domainsurvei::$DomainsurveiModel
+#0 C:\xampp\htdocs\skm2020\app\Controllers\Opd\DomainSurvei.php(23): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\xampp\\htdocs...', 23, Array)
+#1 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\Opd\Domainsurvei->index()
+#2 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Opd\Domainsurvei))
+#3 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\skm2020\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2021-02-06 23:33:23 --> Undefined variable: Domainsurvei
+#0 C:\xampp\htdocs\skm2020\app\Views\opd\domainsurvei.php(68): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 68, Array)
+#1 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\Common.php(1119): CodeIgniter\View\View->render('opd/domainsurve...', Array, true)
+#3 C:\xampp\htdocs\skm2020\app\Controllers\Opd\DomainSurvei.php(28): view('opd/domainsurve...', Array)
+#4 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\Opd\Domainsurvei->index()
+#5 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Opd\Domainsurvei))
+#6 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\skm2020\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2021-02-06 23:51:58 --> Undefined property: stdClass::$nama_unit
+#0 C:\xampp\htdocs\skm2020\app\Views\admin\layanan.php(70): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\xampp\\htdocs...', 70, Array)
+#1 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\Common.php(1119): CodeIgniter\View\View->render('admin/layanan', Array, true)
+#3 C:\xampp\htdocs\skm2020\app\Controllers\Admin\Layanan.php(25): view('admin/layanan', Array)
+#4 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\Admin\Layanan->index()
+#5 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Layanan))
+#6 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\skm2020\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2021-02-06 23:52:28 --> Undefined property: stdClass::$nama_unitlayanan
+#0 C:\xampp\htdocs\skm2020\app\Views\admin\layanan.php(70): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\xampp\\htdocs...', 70, Array)
+#1 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\Common.php(1119): CodeIgniter\View\View->render('admin/layanan', Array, true)
+#3 C:\xampp\htdocs\skm2020\app\Controllers\Admin\Layanan.php(25): view('admin/layanan', Array)
+#4 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\Admin\Layanan->index()
+#5 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Layanan))
+#6 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\skm2020\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2021-02-06 23:52:36 --> Undefined property: stdClass::$nama_unitlayanan
+#0 C:\xampp\htdocs\skm2020\app\Views\admin\layanan.php(70): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\xampp\\htdocs...', 70, Array)
+#1 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\Common.php(1119): CodeIgniter\View\View->render('admin/layanan', Array, true)
+#3 C:\xampp\htdocs\skm2020\app\Controllers\Admin\Layanan.php(25): view('admin/layanan', Array)
+#4 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\Admin\Layanan->index()
+#5 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Layanan))
+#6 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\skm2020\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2021-02-06 23:54:10 --> Undefined property: App\Controllers\Admin\Domainsurvei::$WebsiteModel
+#0 C:\xampp\htdocs\skm2020\app\Controllers\Admin\Domainsurvei.php(24): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\xampp\\htdocs...', 24, Array)
+#1 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\Admin\Domainsurvei->index()
+#2 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Domainsurvei))
+#3 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\skm2020\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2021-02-06 23:55:24 --> Undefined property: App\Controllers\Admin\Domainsurvei::$WebsiteModel
+#0 C:\xampp\htdocs\skm2020\app\Controllers\Admin\Domainsurvei.php(24): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\xampp\\htdocs...', 24, Array)
+#1 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\Admin\Domainsurvei->index()
+#2 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Domainsurvei))
+#3 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\skm2020\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2021-02-06 23:55:33 --> Undefined property: App\Controllers\Admin\Domainsurvei::$WebsiteModel
+#0 C:\xampp\htdocs\skm2020\app\Controllers\Admin\Domainsurvei.php(24): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\xampp\\htdocs...', 24, Array)
+#1 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\Admin\Domainsurvei->index()
+#2 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Domainsurvei))
+#3 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\skm2020\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2021-02-06 23:55:35 --> Undefined variable: WebsiteAll
+#0 C:\xampp\htdocs\skm2020\app\Views\admin\domainsurvei.php(30): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 30, Array)
+#1 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\Common.php(1119): CodeIgniter\View\View->render('admin/domainsur...', Array, true)
+#3 C:\xampp\htdocs\skm2020\app\Controllers\Admin\Domainsurvei.php(28): view('admin/domainsur...', Array)
+#4 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\Admin\Domainsurvei->index()
+#5 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Domainsurvei))
+#6 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\skm2020\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2021-02-06 23:55:41 --> Undefined property: App\Controllers\Admin\Domainsurvei::$WebsiteModel
+#0 C:\xampp\htdocs\skm2020\app\Controllers\Admin\Domainsurvei.php(24): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\xampp\\htdocs...', 24, Array)
+#1 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\Admin\Domainsurvei->index()
+#2 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Domainsurvei))
+#3 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\skm2020\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2021-02-06 23:55:42 --> Undefined property: App\Controllers\Admin\Domainsurvei::$WebsiteModel
+#0 C:\xampp\htdocs\skm2020\app\Controllers\Admin\Domainsurvei.php(24): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\xampp\\htdocs...', 24, Array)
+#1 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\Admin\Domainsurvei->index()
+#2 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Domainsurvei))
+#3 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\skm2020\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2021-02-06 23:55:51 --> Undefined variable: WebsiteAll
+#0 C:\xampp\htdocs\skm2020\app\Views\admin\domainsurvei.php(30): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 30, Array)
+#1 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\Common.php(1119): CodeIgniter\View\View->render('admin/domainsur...', Array, true)
+#3 C:\xampp\htdocs\skm2020\app\Controllers\Admin\Domainsurvei.php(28): view('admin/domainsur...', Array)
+#4 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\Admin\Domainsurvei->index()
+#5 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Domainsurvei))
+#6 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\skm2020\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2021-02-06 23:55:59 --> Undefined variable: LayananAll
+#0 C:\xampp\htdocs\skm2020\app\Views\admin\domainsurvei.php(39): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 39, Array)
+#1 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\Common.php(1119): CodeIgniter\View\View->render('admin/domainsur...', Array, true)
+#3 C:\xampp\htdocs\skm2020\app\Controllers\Admin\Domainsurvei.php(28): view('admin/domainsur...', Array)
+#4 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\Admin\Domainsurvei->index()
+#5 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Domainsurvei))
+#6 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\skm2020\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2021-02-06 23:56:04 --> Undefined variable: Domainsurvei
+#0 C:\xampp\htdocs\skm2020\app\Views\admin\domainsurvei.php(68): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 68, Array)
+#1 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\Common.php(1119): CodeIgniter\View\View->render('admin/domainsur...', Array, true)
+#3 C:\xampp\htdocs\skm2020\app\Controllers\Admin\Domainsurvei.php(28): view('admin/domainsur...', Array)
+#4 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\Admin\Domainsurvei->index()
+#5 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Domainsurvei))
+#6 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\skm2020\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\skm2020\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#9 {main}

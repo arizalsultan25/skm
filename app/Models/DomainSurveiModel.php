@@ -4,9 +4,9 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class DomainSurveiModel extends Model
+class DomainsurveiModel extends Model
 {
-    protected $table = 'domain-survei';
+    protected $table = 'domainsurvei';
     protected $allowedFields = ['website_id', 'layanan_id'];
 
     public function __construct()
@@ -14,9 +14,9 @@ class DomainSurveiModel extends Model
         $this->db = \Config\Database::connect();
     }
 
-    public function getAllDomainSurvei()
+    public function getAllDomainsurvei()
     {
-        $builder = $this->db->table('domain-survei a');
+        $builder = $this->db->table('domainsurvei a');
         $builder->select('a.*, b.nama as nama_layanan, c.domain');
         $builder->join('layanan b', 'b.id = a.layanan_id');
         $builder->join('website c', 'c.id = a.website_id');
@@ -24,9 +24,9 @@ class DomainSurveiModel extends Model
         return $builder->get()->getResult();
     }
 
-    public function getIdDomainSurvei($id)
+    public function getIdDomainsurvei($id)
     {
-        $builder = $this->db->table('domain-survei');
+        $builder = $this->db->table('domainsurvei');
         return $builder->getWhere(['id' => $id])->getRow();
     }
 }

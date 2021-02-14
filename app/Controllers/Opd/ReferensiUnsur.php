@@ -3,34 +3,34 @@
 namespace App\Controllers\Opd;
 
 use App\Controllers\BaseController;
-use App\Models\ReferensiUnsurModel;
+use App\Models\ReferensiunsurModel;
 
-class ReferensiUnsur extends BaseController
+class Referensiunsur extends BaseController
 {
     public function __construct()
     {
-        $this->referensiModel = new ReferensiUnsurModel();
+        $this->ReferensiunsurModel = new ReferensiunsurModel();
     }
 
     public function index()
     {
         $data = [
             'title' => 'Daftar Referensi | Survei Batam',
-            'referensi' => $this->referensiModel->getReferensi(),
+            'referensi' => $this->ReferensiunsurModel->getReferensiunsur(),
             'validation' => \Config\Services::validation()
         ];
 
-        return view('opd/referensi_unsur', $data);
+        return view('opd/referensiunsur', $data);
     }
 
     public function create()
     {
         if (!$this->validate(
-            ['nama' => 'required|is_unique[ref-unsur.nama]']
+            ['nama' => 'required|is_unique[referensiunsur.nama]']
         )) {
             return redirect()->to('/opd/website')->withInput();
         }
-        $this->referensiModel->save([
+        $this->ReferensiunsurModel->save([
             'nama' => $this->request->getVar('nama')
         ]);
         session()->setFlashdata('pesan', 'Nama Unsur berhasil ditambahkan');
@@ -42,19 +42,19 @@ class ReferensiUnsur extends BaseController
         if (!isset($_POST['update'])) {
             $data = [
                 'title' => 'Daftar Referensi Unsur | Survei Batam',
-                'ref' => $this->referensiModel->getReferensi($id),
+                'referensiunsur' => $this->referensiModel->getReferensiunsur($id),
                 'validation' => \Config\Services::validation()
             ];
-            return view('opd/referensi_unsurUpdate', $data);
+            return view('opd/referensiunsurUpdate', $data);
         } else {
             if (!$this->validate([
-                'nama' => "required|is_unique[ref-unsur.nama,id,{$this->request->getVar('id_referensi')}]"
+                'nama' => "required|is_unique[referensiunsur.nama,id,{$this->request->getVar('referensiunsur_id')}]"
             ])) {
-                return redirect()->to('/opd/referensi/update' . $id)->withInput();
+                return redirect()->to('/opd/referensiunsur/update' . $id)->withInput();
             }
 
-            $this->referensiModel->save([
-                'id' => $this->request->getVar('id_referensi'),
+            $this->ReferensiunsurModel->save([
+                'id' => $this->request->getVar('referensiunsur_id'),
                 'nama' => $this->request->getVar('nama')
             ]);
 
@@ -65,7 +65,7 @@ class ReferensiUnsur extends BaseController
 
     public function delete($id)
     {
-        $this->referensiModel->delete($id);
+        $this->ReferensiunsurModel->delete($id);
         session()->setFlashdata('pesan', 'Referensi Unsur berhasil dihapus!');
         return redirect()->to('/opd/referensiunsur');
     }

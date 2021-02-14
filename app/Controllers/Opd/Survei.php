@@ -10,16 +10,16 @@ class Survei extends BaseController
 {
     public function __construct()
     {
-        $this->surveiModel = new SurveiModel();
-        $this->layananModel = new LayananModel();
+        $this->SurveiModel = new SurveiModel();
+        $this->LayananModel = new LayananModel();
     }
 
     public function index()
     {
         $data = [
             'title' => 'Daftar Survei | Survei Batam',
-            'layanan' => $this->layananModel->getAllLayanan(),
-            'survei' => $this->surveiModel->getSurvei(),
+            'layanan' => $this->LayananModel->getAllLayanan(),
+            'survei' => $this->SurveiModel->getSurvei(),
             'validation' => \Config\Services::validation()
         ];
 
@@ -38,7 +38,7 @@ class Survei extends BaseController
         )) {
             return redirect()->to('/opd/survei')->withInput();
         }
-        $this->surveiModel->save([
+        $this->SurveiModel->save([
             'layanan_id' => $this->request->getVar('layanan_id'),
             'nama' => $this->request->getVar('nama'),
             'start' => $this->request->getVar('start'),
@@ -53,16 +53,16 @@ class Survei extends BaseController
         if (!isset($_POST['update'])) {
             $data = [
                 'title' => 'Update Survei | Survei Batam',
-                'layanan' => $this->layananModel->getAllLayanan(),
-                'survei' => $this->surveiModel->getSurvei(),
-                'surveiId' => $this->surveiModel->getIdSurvei($id),
+                'layanan' => $this->LayananModel->getAllLayanan(),
+                'survei' => $this->SurveiModel->getSurvei(),
+                'surveiId' => $this->SurveiModel->getIdSurvei($id),
                 'validation' => \Config\Services::validation()
             ];
             return view('opd/surveiUpdate', $data);
         } else {
             if (!$this->validate(
                 [
-                    'nama' => "required|is_unique[survei.nama,id,{$this->request->getVar('id_survei')}]",
+                    'nama' => "required|is_unique[survei.nama,id,{$this->request->getVar('survei_id')}]",
                     'layanan_id' => "required",
                     'start' => "required",
                     'end' => "required",
@@ -70,7 +70,7 @@ class Survei extends BaseController
             )) {
                 return redirect()->to('/opd/surveiUpdate/' . $id)->withInput();
             }
-            $this->surveiModel->save([
+            $this->SurveiModel->save([
                 'id' => $this->request->getVar('survei_id'),
                 'layanan_id' => $this->request->getVar('layanan_id'),
                 'nama' => $this->request->getVar('nama'),
@@ -84,7 +84,7 @@ class Survei extends BaseController
 
     public function delete($id)
     {
-        $this->surveiModel->delete($id);
+        $this->SurveiModel->delete($id);
         session()->setFlashdata('pesan', 'Survei berhasil dihapus!');
         return redirect()->to('/opd/survei');
     }
